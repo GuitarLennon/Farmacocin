@@ -175,7 +175,8 @@ Public Class ModeloFarmacocinéticoAnimado
     Public ReadOnly Property AUC As Double
         Get
             If Dosificación = TipoDosificación.Única Then
-                Return PK_Pool.AUC_0ToInf(C0, ConstanteEliminación, A0, ConstanteAbsorción)
+                'Return PK_Pool.AUC_0ToInf(C0, ConstanteEliminación, A0, ConstanteAbsorción)
+                Return CoeficienteQ / ConstanteEliminación
             Else
                 Return AUC(0, Duración)
             End If
@@ -253,7 +254,7 @@ Public Class ModeloFarmacocinéticoAnimado
 
     Public Property StartingX As Double = 0
     Public Property EndingX As Double = 100
-    Public Property StepX As Double = 0.001
+    Public Property StepX As Double = 0.5
     Public Property CurrentX As Double = 0
 
     Public Property PrincipalElement As Element
@@ -374,11 +375,20 @@ Public Class ModeloFarmacocinéticoAnimado
         If Me.Gráfico Is Nothing Then [Stop]() : Exit Sub
         If Me.Gráfico.ElementCount <= PrincipalElement.id Then [Stop]() : Exit Sub
 
+        Dim y As Double = CP(e.X)
+
         If SoloEliminacíón Then
             e.addResponse(CP(e.X, True), PrincipalElement.id)
         Else
-            e.addResponse(CP(e.X), PrincipalElement.id)
+            e.addResponse(y, PrincipalElement.id)
             e.addResponse(CP(e.X, True), SecundaryElement.id)
+        End If
+
+        If y > _cmax AndAlso Tmax >= 0 Then
+            _cmax = y
+            _tmax = e.X
+        Else
+
         End If
 
     End Sub
@@ -420,7 +430,7 @@ Public Class ModeloFarmacocinéticoAnimado
 
         Dim range As Double = Me.EndingX - Me.StartingX
 
-        plotData(New DrawingEventArgs.response(Me.StartingX - 1) With {.y = max, .element = 0})
+        plotData(New DrawingEventArgs.response(Me.StartingX) With {.y = max, .element = 0})
         plotData(New DrawingEventArgs.response(Me.EndingX) With {.y = 0, .element = 0})
 
         Gráfico.AutoRange()
@@ -461,7 +471,37 @@ Public Class ModeloFarmacocinéticoAnimado
 
         ' C0
         Gráfico.AddCursor(0, CoeficienteQ * getUnit(unit), color:=Color.Violet)
-        Gráfico.AddAnnotation(Me.StartingX - range / 20, CoeficienteQ * getUnit(unit), "Concentración tiempo cero", BackgroundColor, Color.Violet, True, True)
+        Gráfico.AddAnnotation(Me.EndingX - range * 2 / 7, CoeficienteQ * getUnit(unit), "Concentración tiempo cero", BackgroundColor, Color.Violet, True, True)
+
+    End Sub
+
+    Public Sub Instant()
+        'Clear()
+
+        Dim d As New PrePlotEventArgs
+
+        RaiseEvent PrePlot(Me, d)
+
+        Gráfico.PlotAreaColor = BackgroundColor
+
+        If d.DrawAxis Then drawAxis()
+
+        If d.Autorange Then autoRange()
+
+        If d.AnnotateStarts Then Me.Annotations = True Else Me.Annotations = False
+
+        SecundaryElement.ToGraph(Me.Gráfico)
+
+        PrincipalElement.ToGraph(Me.Gráfico)
+
+        'For Me._CurrentX = StartingX To EndingX Step StepX
+        While Me.CurrentX < Me.EndingX
+
+            Me.internalDraw(Me, New EventArgs)
+        End While
+        'Next
+
+        Me_stopEvent()
 
     End Sub
 
@@ -485,7 +525,7 @@ Public Class ModeloFarmacocinéticoAnimado
 
         PrincipalElement.ToGraph(Me.Gráfico)
 
-        CurrentX = StartingX - StepX * 1
+        CurrentX = StartingX
 
         [Continue]()
 
@@ -523,6 +563,15 @@ Public Class ModeloFarmacocinéticoAnimado
                 Gráfico.AddCursor(Me._tmax, Me._cmax, 0, Color.Gray)
                 Me.Gráfico.AddAnnotation(Me._tmax + 1, Me._cmax * 1, "c-max: " & FormatNumber(_cmax, 3) & " " & getUnitString(unit) &
                                                                     ", t-max: " & FormatNumber(_tmax, 3) & " h", BackgroundColor)
+            End If
+
+            If Me.MostrarAcotaciones Then
+                Me.Gráfico.AddAnnotation(Me._tmax / 3, Me._cmax / 2, " AUC " & FormatNumber(AUC(), 3) & " " & getUnitString(unit) &
+                                         "^2")
+
+                'Me.Gráfico.AddAnnotation((EndingX - StartingX) / 10, Me.CoeficienteQ * 1.1, " Concentración tiempo cero " &
+                '                          FormatNumber(Me.CoeficienteQ, 3) & " " & getUnitString(unit))
+
             End If
 
             If Me.InicioDosis Is Nothing Then Exit Sub
@@ -584,12 +633,12 @@ Public Class ModeloFarmacocinéticoAnimado
 
         End If
 
-        If returning > _cmax AndAlso Tmax >= 0 Then
-            _cmax = returning
-            _tmax = x
-        Else
-
-        End If
+        'If returning > _cmax AndAlso Tmax >= 0 Then
+        '    _cmax = returning
+        '    _tmax = x
+        'Else
+        '
+        'End If
 
         Return returning
     End Function
@@ -710,9 +759,6 @@ Public Class ModeloFarmacocinéticoAnimado
         Return CurrentConcentration
     End Function
 
-    'Absorciones
-
-    'Eliminaciones
     Private Function ZeroOrderElimination(x As Double,
                                           Optional dosis As Double = -1,
                                           Optional omitirAbsorción As Boolean = False,

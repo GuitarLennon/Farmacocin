@@ -24,12 +24,15 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Iniciar = New System.Windows.Forms.Button()
-        Me.Detener = New System.Windows.Forms.Button()
-        Me.Continuar = New System.Windows.Forms.Button()
-        Me.Borrar = New System.Windows.Forms.Button()
-        Me.Clear = New System.Windows.Forms.Button()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.Instant = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Iniciar = New System.Windows.Forms.ToolStripButton()
+        Me.Detener = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Clear = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Save = New System.Windows.Forms.ToolStripButton()
         Me.MainTabControl = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
@@ -143,7 +146,7 @@ Partial Class MainForm
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
         Me.MainTabControl.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -213,7 +216,7 @@ Partial Class MainForm
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.FlowLayoutPanel1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ToolStrip1)
         Me.SplitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No
         '
         'SplitContainer1.Panel2
@@ -227,68 +230,70 @@ Partial Class MainForm
         Me.SplitContainer1.SplitterDistance = 689
         Me.SplitContainer1.TabIndex = 0
         '
-        'FlowLayoutPanel1
+        'ToolStrip1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Iniciar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Detener)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Continuar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Borrar)
-        Me.FlowLayoutPanel1.Controls.Add(Me.Clear)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 700)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(689, 36)
-        Me.FlowLayoutPanel1.TabIndex = 3
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Instant, Me.ToolStripSeparator2, Me.Iniciar, Me.Detener, Me.ToolStripSeparator3, Me.Clear, Me.ToolStripSeparator1, Me.Save})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(689, 25)
+        Me.ToolStrip1.TabIndex = 4
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'Instant
+        '
+        Me.Instant.Image = Global.Farmacocinética.My.Resources.Resources.flag_16xLG
+        Me.Instant.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Instant.Name = "Instant"
+        Me.Instant.Size = New System.Drawing.Size(89, 22)
+        Me.Instant.Text = "Instantáneo"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Iniciar
         '
-        Me.Iniciar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Iniciar.Location = New System.Drawing.Point(3, 3)
+        Me.Iniciar.Image = Global.Farmacocinética.My.Resources.Resources.startwithoutdebugging_6556
+        Me.Iniciar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Iniciar.Name = "Iniciar"
-        Me.Iniciar.Size = New System.Drawing.Size(70, 26)
-        Me.Iniciar.TabIndex = 11
-        Me.Iniciar.Text = "Inicia"
-        Me.Iniciar.UseVisualStyleBackColor = True
+        Me.Iniciar.Size = New System.Drawing.Size(59, 22)
+        Me.Iniciar.Text = "Iniciar"
         '
         'Detener
         '
-        Me.Detener.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Detener.Location = New System.Drawing.Point(79, 3)
+        Me.Detener.Image = Global.Farmacocinética.My.Resources.Resources.Stroke
+        Me.Detener.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Detener.Name = "Detener"
-        Me.Detener.Size = New System.Drawing.Size(70, 26)
-        Me.Detener.TabIndex = 37
-        Me.Detener.Text = "Pausa"
-        Me.Detener.UseVisualStyleBackColor = True
+        Me.Detener.Size = New System.Drawing.Size(68, 22)
+        Me.Detener.Text = "Detener"
+        Me.Detener.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Continuar
+        'ToolStripSeparator3
         '
-        Me.Continuar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Continuar.Location = New System.Drawing.Point(155, 3)
-        Me.Continuar.Name = "Continuar"
-        Me.Continuar.Size = New System.Drawing.Size(70, 26)
-        Me.Continuar.TabIndex = 39
-        Me.Continuar.Text = "Continuar"
-        Me.Continuar.UseVisualStyleBackColor = True
-        '
-        'Borrar
-        '
-        Me.Borrar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Borrar.Location = New System.Drawing.Point(231, 3)
-        Me.Borrar.Name = "Borrar"
-        Me.Borrar.Size = New System.Drawing.Size(70, 26)
-        Me.Borrar.TabIndex = 40
-        Me.Borrar.Text = "Detener"
-        Me.Borrar.UseVisualStyleBackColor = True
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
         'Clear
         '
-        Me.Clear.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Clear.Location = New System.Drawing.Point(307, 3)
+        Me.Clear.Image = Global.Farmacocinética.My.Resources.Resources.Clearallrequests_8816
+        Me.Clear.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Clear.Name = "Clear"
-        Me.Clear.Size = New System.Drawing.Size(70, 26)
-        Me.Clear.TabIndex = 66
+        Me.Clear.Size = New System.Drawing.Size(67, 22)
         Me.Clear.Text = "Limpiar"
-        Me.Clear.UseVisualStyleBackColor = True
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'Save
+        '
+        Me.Save.Image = Global.Farmacocinética.My.Resources.Resources.Save_6530
+        Me.Save.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Save.Name = "Save"
+        Me.Save.Size = New System.Drawing.Size(112, 22)
+        Me.Save.Text = "Guardar Imagen"
         '
         'MainTabControl
         '
@@ -350,7 +355,7 @@ Partial Class MainForm
         'VME
         '
         Me.VME.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VME.Location = New System.Drawing.Point(0, 13)
+        Me.VME.Location = New System.Drawing.Point(0, 0)
         Me.VME.Name = "VME"
         Me.VME.Size = New System.Drawing.Size(254, 20)
         Me.VME.TabIndex = 10
@@ -370,7 +375,7 @@ Partial Class MainForm
         'VMA
         '
         Me.VMA.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VMA.Location = New System.Drawing.Point(0, 13)
+        Me.VMA.Location = New System.Drawing.Point(0, 0)
         Me.VMA.Name = "VMA"
         Me.VMA.Size = New System.Drawing.Size(254, 20)
         Me.VMA.TabIndex = 10
@@ -390,7 +395,8 @@ Partial Class MainForm
         'VelocidadMaximaEliminación
         '
         Me.VelocidadMaximaEliminación.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VelocidadMaximaEliminación.Location = New System.Drawing.Point(0, 13)
+        Me.VelocidadMaximaEliminación.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.VelocidadMaximaEliminación.Location = New System.Drawing.Point(0, 0)
         Me.VelocidadMaximaEliminación.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.VelocidadMaximaEliminación.Name = "VelocidadMaximaEliminación"
         Me.VelocidadMaximaEliminación.Size = New System.Drawing.Size(254, 20)
@@ -415,7 +421,7 @@ Partial Class MainForm
         Me.TipoEliminación.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TipoEliminación.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TipoEliminación.FormattingEnabled = True
-        Me.TipoEliminación.Location = New System.Drawing.Point(0, 13)
+        Me.TipoEliminación.Location = New System.Drawing.Point(0, 0)
         Me.TipoEliminación.Name = "TipoEliminación"
         Me.TipoEliminación.Size = New System.Drawing.Size(254, 21)
         Me.TipoEliminación.TabIndex = 4
@@ -436,7 +442,8 @@ Partial Class MainForm
         '
         Me.Eliminación.DecimalPlaces = 3
         Me.Eliminación.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Eliminación.Location = New System.Drawing.Point(0, 13)
+        Me.Eliminación.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Eliminación.Location = New System.Drawing.Point(0, 0)
         Me.Eliminación.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Eliminación.Name = "Eliminación"
         Me.Eliminación.Size = New System.Drawing.Size(254, 20)
@@ -460,7 +467,8 @@ Partial Class MainForm
         '
         Me.Absorción.DecimalPlaces = 3
         Me.Absorción.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Absorción.Location = New System.Drawing.Point(0, 13)
+        Me.Absorción.Increment = New Decimal(New Integer() {1, 0, 0, 131072})
+        Me.Absorción.Location = New System.Drawing.Point(0, 0)
         Me.Absorción.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Absorción.Name = "Absorción"
         Me.Absorción.Size = New System.Drawing.Size(254, 20)
@@ -483,7 +491,7 @@ Partial Class MainForm
         'BD
         '
         Me.BD.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.BD.Location = New System.Drawing.Point(0, 13)
+        Me.BD.Location = New System.Drawing.Point(0, 0)
         Me.BD.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.BD.Name = "BD"
         Me.BD.Size = New System.Drawing.Size(254, 20)
@@ -506,7 +514,7 @@ Partial Class MainForm
         'VD_Num
         '
         Me.VD_Num.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.VD_Num.Location = New System.Drawing.Point(0, 13)
+        Me.VD_Num.Location = New System.Drawing.Point(0, 0)
         Me.VD_Num.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.VD_Num.Name = "VD_Num"
         Me.VD_Num.Size = New System.Drawing.Size(254, 20)
@@ -563,7 +571,7 @@ Partial Class MainForm
         'ChargeDose
         '
         Me.ChargeDose.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ChargeDose.Location = New System.Drawing.Point(0, 13)
+        Me.ChargeDose.Location = New System.Drawing.Point(0, 0)
         Me.ChargeDose.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.ChargeDose.Name = "ChargeDose"
         Me.ChargeDose.Size = New System.Drawing.Size(248, 20)
@@ -598,7 +606,7 @@ Partial Class MainForm
         'DosisTotalesNum
         '
         Me.DosisTotalesNum.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DosisTotalesNum.Location = New System.Drawing.Point(0, 13)
+        Me.DosisTotalesNum.Location = New System.Drawing.Point(0, 0)
         Me.DosisTotalesNum.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.DosisTotalesNum.Name = "DosisTotalesNum"
         Me.DosisTotalesNum.Size = New System.Drawing.Size(248, 20)
@@ -621,7 +629,7 @@ Partial Class MainForm
         'IntérvaloDosificaciónMinutos
         '
         Me.IntérvaloDosificaciónMinutos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IntérvaloDosificaciónMinutos.Location = New System.Drawing.Point(0, 13)
+        Me.IntérvaloDosificaciónMinutos.Location = New System.Drawing.Point(0, 0)
         Me.IntérvaloDosificaciónMinutos.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.IntérvaloDosificaciónMinutos.Name = "IntérvaloDosificaciónMinutos"
         Me.IntérvaloDosificaciónMinutos.Size = New System.Drawing.Size(248, 20)
@@ -644,7 +652,7 @@ Partial Class MainForm
         'IntérvaloDosificaciónHoras
         '
         Me.IntérvaloDosificaciónHoras.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.IntérvaloDosificaciónHoras.Location = New System.Drawing.Point(0, 13)
+        Me.IntérvaloDosificaciónHoras.Location = New System.Drawing.Point(0, 0)
         Me.IntérvaloDosificaciónHoras.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.IntérvaloDosificaciónHoras.Name = "IntérvaloDosificaciónHoras"
         Me.IntérvaloDosificaciónHoras.Size = New System.Drawing.Size(248, 20)
@@ -681,7 +689,7 @@ Partial Class MainForm
         '
         Me.Dosis1.DecimalPlaces = 3
         Me.Dosis1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Dosis1.Location = New System.Drawing.Point(0, 13)
+        Me.Dosis1.Location = New System.Drawing.Point(0, 0)
         Me.Dosis1.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
         Me.Dosis1.Name = "Dosis1"
         Me.Dosis1.Size = New System.Drawing.Size(254, 20)
@@ -720,7 +728,7 @@ Partial Class MainForm
         Me.Unidades.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Unidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Unidades.FormattingEnabled = True
-        Me.Unidades.Location = New System.Drawing.Point(0, 13)
+        Me.Unidades.Location = New System.Drawing.Point(0, 0)
         Me.Unidades.Name = "Unidades"
         Me.Unidades.Size = New System.Drawing.Size(254, 21)
         Me.Unidades.TabIndex = 4
@@ -740,13 +748,13 @@ Partial Class MainForm
         'Velocidad_de_trazo
         '
         Me.Velocidad_de_trazo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Velocidad_de_trazo.Location = New System.Drawing.Point(0, 13)
+        Me.Velocidad_de_trazo.Location = New System.Drawing.Point(0, 0)
         Me.Velocidad_de_trazo.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Velocidad_de_trazo.Name = "Velocidad_de_trazo"
         Me.Velocidad_de_trazo.Size = New System.Drawing.Size(254, 20)
         Me.Velocidad_de_trazo.TabIndex = 1
         Me.Velocidad_de_trazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.Velocidad_de_trazo.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.Velocidad_de_trazo.Value = New Decimal(New Integer() {50, 0, 0, 0})
         '
         'ControlDemostración4
         '
@@ -763,7 +771,7 @@ Partial Class MainForm
         'Horas_Estudio_Num
         '
         Me.Horas_Estudio_Num.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Horas_Estudio_Num.Location = New System.Drawing.Point(0, 13)
+        Me.Horas_Estudio_Num.Location = New System.Drawing.Point(0, 0)
         Me.Horas_Estudio_Num.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Horas_Estudio_Num.Name = "Horas_Estudio_Num"
         Me.Horas_Estudio_Num.Size = New System.Drawing.Size(254, 20)
@@ -1430,6 +1438,8 @@ Partial Class MainForm
         'Acotaciones1
         '
         Me.Acotaciones1.AutoSize = True
+        Me.Acotaciones1.Checked = True
+        Me.Acotaciones1.CheckState = System.Windows.Forms.CheckState.Checked
         Me.Acotaciones1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Acotaciones1.ForeColor = System.Drawing.Color.White
         Me.Acotaciones1.Location = New System.Drawing.Point(0, 0)
@@ -1553,12 +1563,14 @@ Partial Class MainForm
         Me.Controls.Add(Me.SplitContainer1)
         Me.MinimumSize = New System.Drawing.Size(800, 300)
         Me.Name = "MainForm"
-        Me.Text = "Farmacocinética 0.0"
+        Me.Text = "Farma-lab"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
         Me.MainTabControl.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
@@ -1646,12 +1658,6 @@ Partial Class MainForm
 
     End Sub
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
-    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents Iniciar As System.Windows.Forms.Button
-    Friend WithEvents Detener As System.Windows.Forms.Button
-    Friend WithEvents Continuar As System.Windows.Forms.Button
-    Friend WithEvents Borrar As System.Windows.Forms.Button
-    Friend WithEvents Clear As System.Windows.Forms.Button
     Friend WithEvents MainTabControl As System.Windows.Forms.TabControl
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
@@ -1761,5 +1767,14 @@ Partial Class MainForm
     Friend WithEvents Marca1_tamaño As System.Windows.Forms.NumericUpDown
     Friend WithEvents Marca1_visible As System.Windows.Forms.CheckBox
     Friend WithEvents Marca1_label As System.Windows.Forms.Label
+    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents Instant As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Iniciar As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Detener As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Clear As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Save As System.Windows.Forms.ToolStripButton
 
 End Class

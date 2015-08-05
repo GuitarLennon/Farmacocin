@@ -8,123 +8,121 @@ Public Class MainForm
 
     <Serializable>
    Public Class Info
-        Public formas As FormaFarmacéutica()
+        'Public formas As FormaFarmacéutica()
         Public farmas As Fármaco()
         Sub New()
 
         End Sub
     End Class
 
-    Private ruta As String = My.Application.Info.DirectoryPath & "\config.xml"
-
     Public Sub loadCustom()
-        If Not IO.File.Exists(ruta) Then Exit Sub
-        Try
-            Dim XmlRdr As New XmlTextReader(ruta)
-            Dim Ser As New Serialization.XmlSerializer(GetType(Info))
+        'If Not IO.File.Exists(ruta) Then Exit Sub
+        'Try
+        '    Dim XmlRdr As New XmlTextReader(ruta)
+        '    Dim Ser As New Serialization.XmlSerializer(GetType(Info))
 
-            Dim i As Info
+        '    Dim i As Info
 
-            If Ser.CanDeserialize(XmlRdr) Then
+        '    If Ser.CanDeserialize(XmlRdr) Then
 
-                i = Ser.Deserialize(XmlRdr)
-                customFarmacos = i.farmas
-                customFormasFarmacéuticas = i.formas
+        '        i = Ser.Deserialize(XmlRdr)
+        '        customFarmacos = i.farmas
+        '        customFormasFarmacéuticas = i.formas
 
-            Else
+        '    Else
 
-                'do nothing
+        '        'do nothing
 
-            End If
-        Catch X As System.IO.FileNotFoundException
+        '    End If
+        'Catch X As System.IO.FileNotFoundException
 
-        Catch
+        'Catch
 
-        Finally
+        'Finally
 
-        End Try
+        'End Try
     End Sub
 
     Public Sub saveCustom()
 
-        Dim XmlWrt As XmlWriter
-        Dim settings As New XmlWriterSettings() With {.Indent = True, .IndentChars = " ", _
-                                                     .Encoding = System.Text.Encoding.Default}
-        Dim tipo As Type = GetType(Info)
-        'Dim extratypes As Type() = New Type() {GetType(FormaFarmacéutica)}
+        'Dim XmlWrt As XmlWriter
+        'Dim settings As New XmlWriterSettings() With {.Indent = True, .IndentChars = " ", _
+        '                                             .Encoding = System.Text.Encoding.Default}
+        'Dim tipo As Type = GetType(Info)
+        ''Dim extratypes As Type() = New Type() {GetType(FormaFarmacéutica)}
 
-        Dim i As New Info With {.farmas = customFarmacos, .formas = customFormasFarmacéuticas}
+        'Dim i As New Info With {.farmas = customFarmacos, .formas = customFormasFarmacéuticas}
 
-        Try
-            XmlWrt = XmlWriter.Create(ruta, settings)
-            Dim Ser As New Serialization.XmlSerializer(tipo)
+        'Try
+        '    XmlWrt = XmlWriter.Create(ruta, settings)
+        '    Dim Ser As New Serialization.XmlSerializer(tipo)
 
-            Ser.Serialize(XmlWrt, i)
+        '    Ser.Serialize(XmlWrt, i)
 
-        Catch ex As Exception
+        'Catch ex As Exception
 
-        End Try
+        'End Try
     End Sub
 
-    <Serializable>
-    Public Class FormaFarmacéutica
-        Public Const DensidadEtanol As Double = 0.789
-        Property Nombre As String
-        Dim _dosis As Double
-        ReadOnly Property Dosis As Double
-            Get
-                If _dosis = -1 Then Return mililitrosAGramos(Volumen)
-                Return _dosis
-            End Get
-        End Property
-        Property _default As Boolean
+    '<Serializable>
+    'Public Class FormaFarmacéutica
+    '    Public Const DensidadEtanol As Double = 0.789
+    '    Property Nombre As String
+    '    Dim _dosis As Double
+    '    ReadOnly Property Dosis As Double
+    '        Get
+    '            If _dosis = -1 Then Return mililitrosAGramos(Volumen)
+    '            Return _dosis
+    '        End Get
+    '    End Property
+    '    Property _default As Boolean
 
-        Property AlcVol As Double
-        Property Volumen As Double
+    '    Property AlcVol As Double
+    '    Property Volumen As Double
 
-        Sub New()
+    '    Sub New()
 
-        End Sub
+    '    End Sub
 
-        Sub New(nombre As String, _default As Boolean)
-            Me.Nombre = nombre
-            Me._default = _default
-        End Sub
+    '    Sub New(nombre As String, _default As Boolean)
+    '        Me.Nombre = nombre
+    '        Me._default = _default
+    '    End Sub
 
-        Sub New(nombre As String, AlcVol As Double, volumen As Double, Optional dosis As Double = -1)
+    '    Sub New(nombre As String, AlcVol As Double, volumen As Double, Optional dosis As Double = -1)
 
-            Me.Nombre = nombre
-            Me.Volumen = volumen
-            Me._dosis = dosis
-            Me.AlcVol = AlcVol
-        End Sub
+    '        Me.Nombre = nombre
+    '        Me.Volumen = volumen
+    '        Me._dosis = dosis
+    '        Me.AlcVol = AlcVol
+    '    End Sub
 
-        Public Sub CopyFrom(other As FormaFarmacéutica)
-            Me.AlcVol = other.AlcVol
-            Me.Volumen = other.Volumen
+    '    Public Sub CopyFrom(other As FormaFarmacéutica)
+    '        Me.AlcVol = other.AlcVol
+    '        Me.Volumen = other.Volumen
 
-        End Sub
+    '    End Sub
 
-        Public Overrides Function ToString() As String
-            If Not _default Then
-                Return String.Format("{0} {1}% {2}ml ({3} g)", Me.Nombre, Me.AlcVol, Me.Volumen, Me.Dosis)
+    '    Public Overrides Function ToString() As String
+    '        If Not _default Then
+    '            Return String.Format("{0} {1}% {2}ml ({3} g)", Me.Nombre, Me.AlcVol, Me.Volumen, Me.Dosis)
 
-            End If
-            Return String.Format("{0}", Me.Nombre)
-        End Function
+    '        End If
+    '        Return String.Format("{0}", Me.Nombre)
+    '    End Function
 
-        Public Function mililitrosAGramos(mililitros As Double) As Double
-            Return mililitrosAGramosDeAlcohol(mililitros * AlcVol / 100)
-        End Function
+    '    Public Function mililitrosAGramos(mililitros As Double) As Double
+    '        Return mililitrosAGramosDeAlcohol(mililitros * AlcVol / 100)
+    '    End Function
 
-        Public Shared Function mililitrosAGramosDeAlcohol(mililitros As Double) As Double
-            Return mililitros * DensidadEtanol
-        End Function
+    '    Public Shared Function mililitrosAGramosDeAlcohol(mililitros As Double) As Double
+    '        Return mililitros * DensidadEtanol
+    '    End Function
 
-        Public Function getVolume(gramos As Double) As Double
-            Return (gramos / DensidadEtanol) / (AlcVol / 100)
-        End Function
-    End Class
+    '    Public Function getVolume(gramos As Double) As Double
+    '        Return (gramos / DensidadEtanol) / (AlcVol / 100)
+    '    End Function
+    'End Class
 
     <Serializable>
     Public Class Fármaco
@@ -167,37 +165,38 @@ Public Class MainForm
 
 #Region "Constants"
 
-    Public customFormasFarmacéuticas() As FormaFarmacéutica
+    'Public customFormasFarmacéuticas() As FormaFarmacéutica
 
-    Private formasDefault As FormaFarmacéutica() = New FormaFarmacéutica() {
-        New FormaFarmacéutica("PERSONALIZADO", True) With {.AlcVol = 5, .Volumen = 100},
-        New FormaFarmacéutica("TEQUILA CAZADORES AÑEJO", 38, 45, 13.49),
-        New FormaFarmacéutica("TEQUILA HERRADURA", 40, 45, 14.2),
-        New FormaFarmacéutica("TEQUILA JIMADOR", 35, 45, 12.42),
-        New FormaFarmacéutica("RON BACARDÍ", 40, 45, 14.2),
-        New FormaFarmacéutica("BRANDY PRESIDENTE", 38, 45, 13.49),
-        New FormaFarmacéutica("VODKA ABSOLUT", 40, 45, 13.49),
-        New FormaFarmacéutica("WHISKEY J&B", 40, 45, 14.2),
-        New FormaFarmacéutica("CERVEZA VICTORIA", 4, 355, 11.2),
-        New FormaFarmacéutica("CERVEZA NOCHEBUENA", 5.9, 355, 16.52),
-        New FormaFarmacéutica("CERVEZA CLARA BOHEMIA PREMIUM", 5, 355, 14.0),
-        New FormaFarmacéutica("CERVEZA PACÍFICO", 4.5, 3.55, 12.6),
-        New FormaFarmacéutica("CERVEZA XX LAGER SPECIAL", 4.3, 355, 12.04),
-        New FormaFarmacéutica("CERVEZA CORONA EXTRA", 4.5, 355, 12.6),
-        New FormaFarmacéutica("CERVEZA NEGRA MODELO", 5.3, 355, 14.84),
-        New FormaFarmacéutica("CARIBE COOLER", 4.7, 300, 11.12),
-        New FormaFarmacéutica("VIÑA REAL", 6, 345, 16.33)
-        }
+    'Private formasDefault As FormaFarmacéutica() = New FormaFarmacéutica() {
+    '    New FormaFarmacéutica("PERSONALIZADO", True) With {.AlcVol = 5, .Volumen = 100},
+    '    New FormaFarmacéutica("TEQUILA CAZADORES AÑEJO", 38, 45, 13.49),
+    '    New FormaFarmacéutica("TEQUILA HERRADURA", 40, 45, 14.2),
+    '    New FormaFarmacéutica("TEQUILA JIMADOR", 35, 45, 12.42),
+    '    New FormaFarmacéutica("RON BACARDÍ", 40, 45, 14.2),
+    '    New FormaFarmacéutica("BRANDY PRESIDENTE", 38, 45, 13.49),
+    '    New FormaFarmacéutica("VODKA ABSOLUT", 40, 45, 13.49),
+    '    New FormaFarmacéutica("WHISKEY J&B", 40, 45, 14.2),
+    '    New FormaFarmacéutica("CERVEZA VICTORIA", 4, 355, 11.2),
+    '    New FormaFarmacéutica("CERVEZA NOCHEBUENA", 5.9, 355, 16.52),
+    '    New FormaFarmacéutica("CERVEZA CLARA BOHEMIA PREMIUM", 5, 355, 14.0),
+    '    New FormaFarmacéutica("CERVEZA PACÍFICO", 4.5, 3.55, 12.6),
+    '    New FormaFarmacéutica("CERVEZA XX LAGER SPECIAL", 4.3, 355, 12.04),
+    '    New FormaFarmacéutica("CERVEZA CORONA EXTRA", 4.5, 355, 12.6),
+    '    New FormaFarmacéutica("CERVEZA NEGRA MODELO", 5.3, 355, 14.84),
+    '    New FormaFarmacéutica("CARIBE COOLER", 4.7, 300, 11.12),
+    '    New FormaFarmacéutica("VIÑA REAL", 6, 345, 16.33)
+    '    }
 
-    ReadOnly Property FormasFarmaDef As FormaFarmacéutica()
-        Get
-            Dim l As New List(Of FormaFarmacéutica)
-            l.AddRange(formasDefault)
-            If Not customFormasFarmacéuticas Is Nothing Then l.AddRange(customFormasFarmacéuticas)
-            Return l.ToArray
-        End Get
+    'ReadOnly Property FormasFarmaDef As FormaFarmacéutica()
+    '    Get
+    '        'Dim l As New List(Of FormaFarmacéutica)
+    '        'l.AddRange(formasDefault)
+    '        'If Not customFormasFarmacéuticas Is Nothing Then l.AddRange(customFormasFarmacéuticas)
+    '        'Return l.ToArray
+    '        Return Nothing
+    '    End Get
 
-    End Property
+    'End Property
 
     Private customFarmacos As Fármaco()
 
@@ -652,49 +651,50 @@ Public Class MainForm
         element.ToGraph(NTGraph1)
     End Sub
 
-    Private Sub Iniciar_Click(sender As Object, e As EventArgs) Handles Iniciar.Click
+    Private Sub Crear_Modelo_Farmacocinético()
         Me.ModeloFarmacocinéticoAnimado = New ModeloFarmacocinéticoAnimado(Me.NTGraph1) With
-                                          {.BackgroundColor = Me.ColorFondo,
-                                           .Biodisponibilidad = Me.FracciónBiodisponible,
-                                           .ConstanteAbsorción = Me.Ka,
-                                           .ConstanteEliminación = Me.Ke,
-                                           .CurrentX = 0,
-                                           .DisplayOnSemilogarithm = Log.Checked,
-                                           .Dosificación = Me.TipoDeDosificación,
-                                           .Dosis = Me.Dosis,
-                                           .DosisCarga = Me.DosisCarga,
-                                           .DosisTotales = Me.DosisTotales,
-                                           .EndingX = Me.Horas_de_estudio,
-                                           .IntervaloEntreDosis = Me.IntérvaloDeDosificación,
-                                           .GraphicName = "Farmacocinética",
-                                           .Marcas = Me.Marcas,
-                                           .MostrarAcotaciones = Me.MostrarAcotaciones,
-                                           .PrincipalElement = PrincipalElement,
-                                           .SecundaryElement = SecondaryElement,
-                                           .SoloEliminacíón = Me.SóloEliminación,
-                                           .StartingX = 0,
-                                           .TipoEliminación = Me.TipoDeEliminación,
-                                           .UsarCarga = Me.UsarDosisCarga,
-                                           .unit = Unidad,
-                                           .UnitsAbscises = "Horas",
-                                           .UnitsOrdered = "Concentración plasmática ~ ",
-                                           .VelocidadDelTrazo = Me.VelocidadDeTrazo,
-                                           .VMax = Me.VelocidadMáximaDeEliminación,
-        .VolumenDistribución = VolumenDeDistribución
-                                              }
+                                         {.BackgroundColor = Me.ColorFondo,
+                                          .Biodisponibilidad = Me.FracciónBiodisponible,
+                                          .ConstanteAbsorción = Me.Ka,
+                                          .ConstanteEliminación = Me.Ke,
+                                          .CurrentX = 0,
+                                          .DisplayOnSemilogarithm = Log.Checked,
+                                          .Dosificación = Me.TipoDeDosificación,
+                                          .Dosis = Me.Dosis,
+                                          .DosisCarga = Me.DosisCarga,
+                                          .DosisTotales = Me.DosisTotales,
+                                          .EndingX = Me.Horas_de_estudio,
+                                          .IntervaloEntreDosis = Me.IntérvaloDeDosificación,
+                                          .GraphicName = "Farmacocinética",
+                                          .Marcas = Me.Marcas,
+                                          .MostrarAcotaciones = Me.MostrarAcotaciones,
+                                          .PrincipalElement = PrincipalElement,
+                                          .SecundaryElement = SecondaryElement,
+                                          .SoloEliminacíón = Me.SóloEliminación,
+                                          .StartingX = 0,
+                                          .TipoEliminación = Me.TipoDeEliminación,
+                                          .UsarCarga = Me.UsarDosisCarga,
+                                          .unit = Unidad,
+                                          .UnitsAbscises = "Horas",
+                                          .UnitsOrdered = "Concentración plasmática ~ ",
+                                          .VelocidadDelTrazo = Me.VelocidadDeTrazo,
+                                          .VMax = Me.VelocidadMáximaDeEliminación,
+                                          .VolumenDistribución = VolumenDeDistribución
+                                         }
+    End Sub
+
+    Private Sub Iniciar_Click(sender As Object, e As EventArgs) Handles Iniciar.Click
+        Crear_Modelo_Farmacocinético()
         Me.ModeloFarmacocinéticoAnimado.Start()
     End Sub
 
     Private Sub Detener_Click(sender As Object, e As EventArgs) Handles Detener.Click
-        Me.ModeloFarmacocinéticoAnimado.Pause()
-    End Sub
-
-    Private Sub Continuar_Click(sender As Object, e As EventArgs) Handles Continuar.Click
-        Me.ModeloFarmacocinéticoAnimado.Continue()
-    End Sub
-
-    Private Sub Alto_Click(sender As Object, e As EventArgs) Handles Borrar.Click
         Me.ModeloFarmacocinéticoAnimado.Stop()
+    End Sub
+
+    Private Sub Instant_Click(sender As Object, e As EventArgs) Handles Instant.Click
+        Crear_Modelo_Farmacocinético()
+        Me.ModeloFarmacocinéticoAnimado.Instant()
     End Sub
 
     Private Sub Clear_Click(sender As Object, e As EventArgs) Handles Clear.Click
@@ -896,7 +896,7 @@ Public Class MainForm
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub VidaMediaEliminación(sender As Object, e As EventArgs) Handles Dosis1.ValueChanged
+    Private Sub VidaMediaEliminación(sender As Object, e As EventArgs) Handles Dosis1.ValueChanged, Eliminación.ValueChanged, Absorción.ValueChanged
         Try
             Dim i As Double = VidaMediadeEliminación(Me.Ke, (Me.FracciónBiodisponible * Dosis) / Me.VolumenDeDistribución, Me.TipoDeEliminación, Me.VelocidadMáximaDeEliminación / 10)
             Dim j As Double = VidaMediaSegundoOrden(Ka)
@@ -989,5 +989,39 @@ Public Class MainForm
 
         'saveCustom()
 
+    End Sub
+
+    'Private Sub Eliminación_ValueChanged(sender As Object, e As EventArgs) Handles Eliminación.ValueChanged
+
+    '    Dim t As NumericUpDown = TryCast(sender, NumericUpDown)
+    '    Dim x As Double = 0
+
+    '    If Me.ModeloFarmacocinéticoAnimado IsNot Nothing Then x = Me.ModeloFarmacocinéticoAnimado.CoeficienteQ
+    '    If Not t Is Nothing Then VME.Text = VidaMediadeEliminación(t.Value, x, Me.TipoDeEliminación, Me.VelocidadMáximaDeEliminación)
+
+    'End Sub
+
+    'Private Sub Absorción_ValueChanged(sender As Object, e As EventArgs) Handles Absorción.ValueChanged
+
+    '    Dim t As NumericUpDown = TryCast(sender, NumericUpDown)
+    '    Dim x As Double = 0
+
+    '    If Me.ModeloFarmacocinéticoAnimado IsNot Nothing Then x = Me.ModeloFarmacocinéticoAnimado.CoeficienteQ
+
+    '    If Not t Is Nothing Then VMA.Text = VidaMediadeEliminación(t.Value, Nothing, GradosDeEliminación.Primer_Orden, Nothing)
+
+    'End Sub
+      
+    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+        Dim c As New Windows.Forms.SaveFileDialog With {.AddExtension = True,
+                                                               .CheckFileExists = False,
+                                                               .DefaultExt = "bmp",
+                                                               .FileName = Me.ModeloFarmacocinéticoAnimado.GraphicName,
+                                                               .Filter = "Archivos de mapa de bits|*.bmp"
+                                                              }
+        If c.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            If My.Computer.FileSystem.FileExists(c.FileName) Then My.Computer.FileSystem.DeleteFile(c.FileName)
+            Me.NTGraph1.SaveAs(c.FileName)
+        End If
     End Sub
 End Class

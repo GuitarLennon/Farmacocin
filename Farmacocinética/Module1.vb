@@ -406,7 +406,7 @@ Public Module PK_Pool
     End Function
 
     Function A(fbd As Double, dosis As Double, ka As Double, vd As Double, kel As Double) As Double
-        Return fbd * dosis * ka / (vd * (ka - kel))
+        Return (fbd * dosis * ka) / (vd * (ka - kel))
     End Function
 
     Function Cmax(Q As Double, ke As Double, tmax As Double) As Double
