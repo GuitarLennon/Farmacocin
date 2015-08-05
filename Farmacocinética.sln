@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Farmacocinética", "Farmacocinética\Farmacocinética.vbproj", "{5A217126-B277-44B4-AA33-760AE1B49C01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Unicode Debug|Any CPU = Unicode Debug|Any CPU
+		Unicode Debug|Mixed Platforms = Unicode Debug|Mixed Platforms
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Release|Any CPU = Unicode Release|Any CPU
+		Unicode Release|Mixed Platforms = Unicode Release|Mixed Platforms
+		Unicode Release|Win32 = Unicode Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Release|Win32.ActiveCfg = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Debug|Win32.ActiveCfg = Debug|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Any CPU.Build.0 = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Win32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
