@@ -25,9 +25,9 @@
     <MapFileExtensions>true</MapFileExtensions>
     <TargetCulture>es-MX</TargetCulture>
     <ProductName>FARMACOCINÉTICA</ProductName>
-    <PublisherName>ARTURO JUÁREZ FLORES</PublisherName>
+    <PublisherName>DR ARTURO JUÁREZ FLORES</PublisherName>
     <SuiteName>FARMALAB</SuiteName>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -82,6 +82,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono_farma_fondo %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlActualizable">
@@ -220,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Stroke.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono_farma_fondo %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

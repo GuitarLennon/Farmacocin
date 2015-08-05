@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Revisar los valores de los atributos del ensamblado
 
 <Assembly: AssemblyTitle("Farmacocinética")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyDescription("Traza curvas farmacocinéticas usando un modelo unicompartamental")> 
+<Assembly: AssemblyCompany("Facultad de Medicina de la Universidad Nacional Autónoma de México")> 
 <Assembly: AssemblyProduct("Farmacocinética")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
