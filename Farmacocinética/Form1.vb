@@ -876,18 +876,18 @@ Public Class MainForm
         TextBox_x.Text = Format(e.x, "0.# h")
         TextBox_y.Text = Format(e.y, "0.## ") & getUnitString(Me.Unidad)
 
-        Dim factorConversión As Double
+        'Dim factorConversión As Double
 
-        Select Case Me.Unidad
-            Case Units.g_por_decilitro
-                factorConversión = 100
-            Case Units.gramos_por_litro
-                factorConversión = 1000
-            Case Units.mg_por_100ml
-                factorConversión = 10
-        End Select
+        'Select Case Me.Unidad
+        '    Case Units.g_por_decilitro
+        '        factorConversión = 100
+        '    Case Units.gramos_por_litro
+        '        factorConversión = 1000
+        '    Case Units.mg_por_100ml
+        '        factorConversión = 10
+        'End Select
 
-        TextBox_CAe.Text = String.Format(" {0} mg/L", Format(e.y * factorConversión / 2000, "0.###"))
+        'TextBox_CAe.Text = String.Format(" {0} mg/L", Format(e.y * factorConversión / 2000, "0.###"))
     End Sub
 
     ''' <summary>
@@ -1023,5 +1023,13 @@ Public Class MainForm
             If My.Computer.FileSystem.FileExists(c.FileName) Then My.Computer.FileSystem.DeleteFile(c.FileName)
             Me.NTGraph1.SaveAs(c.FileName)
         End If
+    End Sub
+
+    Private Sub Unidades_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Unidades.SelectedIndexChanged
+        Dim s As String = getUnitString(DirectCast(DirectCast(sender, ComboBox).SelectedItem, Units))
+
+        Unidades1.Text = s
+        Unidades2.Text = s
+        Unidades3.Text = s
     End Sub
 End Class

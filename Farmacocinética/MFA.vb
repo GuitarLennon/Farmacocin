@@ -41,6 +41,7 @@ Public Class ModeloFarmacocinéticoAnimado
     End Structure
 
     Public Enum Units
+        microgramos_por_mililitro
         gramos_por_litro
         g_por_decilitro
         mg_por_100ml
@@ -48,6 +49,8 @@ Public Class ModeloFarmacocinéticoAnimado
 
     Public Shared Function getUnitString(unit As Units, Optional log As Boolean = False) As String
         Select Case unit
+            Case Units.microgramos_por_mililitro
+                If log Then Return "log(mcg/mL)" Else Return "mcg/mL"
             Case Units.gramos_por_litro
                 If log Then Return "log(g/L)" Else Return "g/L"
             Case Units.mg_por_100ml
@@ -61,6 +64,11 @@ Public Class ModeloFarmacocinéticoAnimado
 
     Public Shared Function getUnit(unit As Units) As Double
         Select Case unit
+            Case Units.microgramos_por_mililitro
+                '    g    1000000 g      1 l
+                ' 1 --- (-----------)(---------)
+                '    l       1 g       1000 ml
+                Return 1000
             Case Units.gramos_por_litro
                 '    g    1 g    1 l
                 ' 1 --- (-----)(-----)
@@ -446,9 +454,11 @@ Public Class ModeloFarmacocinéticoAnimado
         Gráfico.YGridNumber = 25
 
         For Each marca As Marca In Me.Marcas
-            Gráfico.AddCursor(Me.EndingX - range * 2 / 7, marca.y * getUnit(unit), 0, marca.color, 1, True, marca.show)
+            'Gráfico.AddCursor(Me.EndingX - range * 2 / 7, marca.y * getUnit(unit), 0, marca.color, 1, True, marca.show)
+            Gráfico.AddCursor(Me.EndingX - range * 2 / 7, marca.y, 0, marca.color, 1, True, marca.show)
             'Gráfico.Cursor
-            Gráfico.AddAnnotation(Me.EndingX - range * 2 / 7, marca.y * getUnit(unit), marca.name, BackgroundColor, marca.color, True, marca.show)
+            'Gráfico.AddAnnotation(Me.EndingX - range * 2 / 7, marca.y * getUnit(unit), marca.name, BackgroundColor, marca.color, True, marca.show)
+            Gráfico.AddAnnotation(Me.EndingX - range * 2 / 7, marca.y, marca.name, BackgroundColor, marca.color, True, marca.show)
 
             'Dim e As New Element() With {.lineColor = marca.color,
             '                             .id = Gráfico.ElementCount,
