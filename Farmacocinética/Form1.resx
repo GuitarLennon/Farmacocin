@@ -117,20 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="Label65.Text" xml:space="preserve">
     <value>Programa Elaborado por el Departamento de Farmacología de la Facultad de Medicina de la UNAM:
 Programador:
   * Dr. Juárez Flores Arturo
-Colaboradores:
+Creadores de contenido:
   * Dr. Magos Guerrero Gil Alfonso 
   * Dr. Santiago Mejía Jacinto
   * Dr. Lorenzana Jiménez Marte
 
 Librerías de:
-  * NTGraph (Nikolai Teofilov) - MIT lic</value>
+  * NTGraph (Nikolai Teofilov) usadas bajo la licencia MIT
+
+PAPIME PROYECTO 26-PE204915 - FACULTAD DE MEDICINA DE LA UNAM - 2015</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -800,6 +799,15 @@ Librerías de:
         VdirsVdirsVf/9k=
 </value>
   </data>
+  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="StatusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>124, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>58</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAXmIAAAEAIACwlAAAFgAAACgAAABeAAAAxAAAAAEAIAAAAAAA8I8AAAAAAAAAAAAAAAAAAAAA

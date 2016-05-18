@@ -22,7 +22,7 @@ Public Module Main
 
         ntgraph.AddAnnotation()
 
-        If backcolor = Drawing.Color.Empty Then backcolor = Drawing.Color.Black
+        If backcolor = Drawing.Color.Empty Then backcolor = ntgraph.PlotAreaColor
         If forecolor = Drawing.Color.Empty Then forecolor = Drawing.Color.White
 
         ntgraph.AnnoLabelBkColor = backcolor
@@ -37,11 +37,11 @@ Public Module Main
     End Function
 
     <Extension>
-    Function AddCursor(ntgraph As AxNTGraph, x As Double, y As Double, _
-                            Optional mode As Short = 0, _
-                            Optional color As Drawing.Color = Nothing, _
-                            Optional style As Short = 0, _
-                            Optional horizontal As Boolean = True, _
+    Function AddCursor(ntgraph As AxNTGraph, x As Double, y As Double,
+                            Optional mode As Short = 0,
+                            Optional color As Drawing.Color = Nothing,
+                            Optional style As Short = 0,
+                            Optional horizontal As Boolean = False,
                             Optional visible As Boolean = True) As Integer
 
         ntgraph.AddCursor()
@@ -53,20 +53,12 @@ Public Module Main
         Catch ex As Exception
             ntgraph.CursorMode = 0
         End Try
-        ntgraph.CursorStyle = style
+        If horizontal = True Then ntgraph.CursorStyle = 1 Else ntgraph.CursorStyle = style
         ntgraph.CursorVisible = visible
         ntgraph.CursorX = x
         ntgraph.CursorY = y
 
         Return ntgraph.CursorCount - 1
-    End Function
-
-    Public Function Función1() As Double()
-        Dim a(1000) As Double
-        For i As Integer = 0 To 1000
-            a(i) = Rnd()
-        Next
-        Return a
     End Function
 
     Public Class Element
@@ -265,7 +257,7 @@ Public Module PK_Pool
         Dim frac3a As Double
         If eliminación = GradosDeEliminación.Michaelis_Menten Then
 
-            Dim C4 As Double = Math.E ^ (-Ka * t)
+            Dim C4 As Double = Math.E ^ (-Ka * t - tlag)
 
             Dim exp As Double = Math.E ^ (vMax / (2.303 * Ke * (t - tlag)))
 
@@ -298,10 +290,23 @@ Public Module PK_Pool
         Return (calc * Math.E ^ kel * t) - (calc * Math.E ^ -ka * t)
     End Function
 
-    Function CP_Múltiple(t As Double, intérvalo As Double, dosis As Double, fBd As Double, Ka As Double, Ke As Double, eliminación As GradosDeEliminación, Vd As Double, tlag As Double) As Double
+    Function CP_Múltiple(t As Double,
+                         intérvalo As Double,
+                         dosis As Double,
+                         fBd As Double,
+                         Ka As Double,
+                         Ke As Double,
+                         eliminación As GradosDeEliminación,
+                         Vd As Double,
+                         tlag As Double,
+                         Optional dosistotales As Integer = -1) As Double
+
+        If t < 0 Then Return 0
         Dim administrados As Integer = CInt(t / intérvalo)
         Dim returning As Double
         Dim a(administrados)
+
+        If dosistotales <> -1 AndAlso administrados > (dosistotales - 1) Then administrados = (dosistotales - 1)
 
         For i As Integer = 0 To administrados
             a(i) = CP(t, dosis, fBd, Ka, Ke, eliminación, Vd, intérvalo * i)
@@ -320,7 +325,18 @@ Public Module PK_Pool
 
     End Function
 
-    Function CP_Múltiple_Charge(t As Double, intérvalo As Double, carga As Double, dosis As Double, fBd As Double, Ka As Double, Ke As Double, eliminación As GradosDeEliminación, Vd As Double, tlag As Double) As Double
+    Function CP_Múltiple_Charge(t As Double,
+                                intérvalo As Double,
+                                carga As Double,
+                                dosis As Double,
+                                fBd As Double,
+                                Ka As Double,
+                                Ke As Double,
+                                eliminación As GradosDeEliminación,
+                                Vd As Double,
+                                tlag As Double,
+                                Optional dosistotales As Integer = -1) As Double
+
         Dim administrados As Integer = CInt(t / intérvalo)
         Dim returning As Double
         Dim a(administrados) As Double
@@ -328,6 +344,8 @@ Public Module PK_Pool
 
         a(0) = CP(t, carga, fBd, Ka, Ke, eliminación, Vd, tlag)
         returning += a(0)
+
+        If dosistotales <> -1 AndAlso administrados > (dosistotales - 1) Then administrados = (dosistotales - 1)
 
         For i As Integer = 1 To administrados
             a(i) = CP(t - (i * intérvalo), dosis, fBd, Ka, Ke, eliminación, Vd, tlag)

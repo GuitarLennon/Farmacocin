@@ -1,0 +1,183 @@
+C:\Users\Arthur\AppData\Local\Temporary Projects\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.test.resources
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.application
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\Arthur\Documents\Visual Studio 2013\Projects\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.pdb
+D:\Google Drive\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.exe
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.xml
+D:\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.test.resources
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.ControlEstructurado.resources
+C:\Users\Admin\Google Drive\Farmacocinética\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\Admin\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.application
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.exe
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.xml
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.pdb
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.application
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.exe
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.pdb
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Farmacocinética.xml
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.dll
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.pdb
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\ControlActualizable.xml
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+D:\Google Drive\Developer\Farmacocinética II\Farmacocinética\obj\Debug\Farmacocinética.application
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.xml
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.pdb
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.dll
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\Admin\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.application
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+D:\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.dll
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno_000\Google Drive\Developer\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.pdb
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application

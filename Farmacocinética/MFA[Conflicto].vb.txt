@@ -154,9 +154,6 @@ Public Class ModeloFarmacocinéticoAnimado
 
     Public Property tLag As Double
 
-    Public Property View_CT0 As Boolean
-    Public Property View_AdministrationStart As Boolean
-
     'Public Property kMichaelis As Double
 
     'Calculados
@@ -276,8 +273,6 @@ Public Class ModeloFarmacocinéticoAnimado
     Public Property SecundaryElement As Element
     Public Property BackgroundColor As Color
     Public Property PrincipalAxisColor As Color
-    Public Property AcotacionesColor As Color
-
 
     Public Property DisplayOnSemilogarithm As Boolean = False
 
@@ -512,12 +507,6 @@ Public Class ModeloFarmacocinéticoAnimado
 
     Private Sub drawAxis()
 
-        'eliminar el cursor móvil
-        If Gráfico.CursorCount >= 1 Then _
-            Gráfico.DeleteCursor(Gráfico.CursorCount - 1)
-
-
-
         Gráfico.AddCursor(0, 0, 0, PrincipalAxisColor)
 
         Gráfico.AddAnnotation(0, -0.75, "0", Color.Black, Color.White)
@@ -653,35 +642,31 @@ Public Class ModeloFarmacocinéticoAnimado
             If Me.Dosificación = TipoDosificación.Única And Me.MostrarAcotaciones Then
                 Gráfico.AddCursor(Me._tmax, Me._cmax, 0, Color.Gray)
                 Me.Gráfico.AddAnnotation(Me._tmax + 1, Me._cmax * 1, "c-max: " & FormatNumber(_cmax, 3) & " " & getUnitString(unit) &
-                                                                    ", t-max: " & FormatNumber(_tmax, 3) & " h", BackgroundColor, AcotacionesColor)
+                                                                    ", t-max: " & FormatNumber(_tmax, 3) & " h", BackgroundColor)
             End If
 
             If Me.MostrarAcotaciones Then
-                Me.Gráfico.AddAnnotation(Me._tmax / 3, Me._cmax / 2, " AUC " & FormatNumber(AUC(), 3) & " (h * " & getUnitString(unit) & ")^2", BackgroundColor, AcotacionesColor)
+                Me.Gráfico.AddAnnotation(Me._tmax / 3, Me._cmax / 2, " AUC " & FormatNumber(AUC(), 3) & " (h * " & getUnitString(unit) & ")^2")
                 'Me.Gráfico.AddAnnotation(Me._tmax / 3, Me._cmax / 2, " AUC " & FormatNumber(AUC(), 3) & " unidades cuadradas")
                 'Me.Gráfico.AddAnnotation((EndingX - StartingX) / 10, Me.CoeficienteQ * 1.1, " Concentración tiempo cero " &
                 '                          FormatNumber(Me.CoeficienteQ, 3) & " " & getUnitString(unit))
 
             End If
 
-            'líneas inicio dosis
-            If View_AdministrationStart Then
-                If Me.InicioDosis Is Nothing Then Exit Sub
-                If Me.InicioDosis.Count > 0 Then
-                    Dim i As Integer = 1
-                    For Each d As Double In Me.InicioDosis
+            If Me.InicioDosis Is Nothing Then Exit Sub
+            If Me.InicioDosis.Count > 0 Then
+                Dim i As Integer = 1
+                For Each d As Double In Me.InicioDosis
 
-                        Dim c As New Coordenadas With {.x = d, .y = CP(d - tLag)}
-                        If Not c.x = 0 Then
-                            Me.Gráfico.AddCursor(c.x, c.y, color:=Me.SecundaryElement.lineColor, horizontal:=False, style:=2)
-                            Me.Gráfico.AddAnnotation(c.x, c.y * 0.95, i, BackgroundColor)
-                        End If
-                        i = i + 1
-                    Next
-                End If
+                    Dim c As New Coordenadas With {.x = d, .y = CP(d - tLag)}
+                    If Not c.x = 0 Then
+                        Me.Gráfico.AddCursor(c.x, c.y, color:=Me.SecundaryElement.lineColor, horizontal:=False, style:=2)
+                        Me.Gráfico.AddAnnotation(c.x, c.y * 0.95, i, BackgroundColor)
+                    End If
+                    i = i + 1
+                Next
             End If
 
-            'cursor desplazable
             Gráfico.AddCursor(0, 0, Me.CursorStyle, Color.Gold, 0)
 
         Catch ex As Exception
@@ -713,10 +698,8 @@ Public Class ModeloFarmacocinéticoAnimado
             Gráfico.PlotXY(EndingX, marca.y, e.id)
 
             ' C0
-            If View_CT0 Then
-                Gráfico.AddCursor(0, CoeficienteQ * getUnit(unit), color:=Color.Violet, horizontal:=True)
-                Gráfico.AddAnnotation(Me.EndingX - range * 5 / 14, CoeficienteQ * getUnit(unit), "Concentración Tiempo Cero", BackgroundColor, AcotacionesColor, True, True)
-            End If
+            Gráfico.AddCursor(0, CoeficienteQ * getUnit(unit), color:=Color.Violet, horizontal:=True)
+            Gráfico.AddAnnotation(Me.EndingX - range * 5 / 14, CoeficienteQ * getUnit(unit), "Concentración Tiempo Cero", BackgroundColor, Color.Violet, True, True)
         Next
     End Sub
 
@@ -1094,6 +1077,7 @@ Public Class ModeloFarmacocinéticoAnimado
                                               tLag,
                                               DosisTotales)
         Else
+
             Return PK_Pool.CP_Múltiple(t,
                                        IntervaloEntreDosis,
                                        Dosis * 1000,

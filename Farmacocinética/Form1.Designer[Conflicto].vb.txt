@@ -84,9 +84,35 @@ Partial Class MainForm
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
         Me.Libre = New System.Windows.Forms.RadioButton()
         Me.MainTabControl = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupMarcas = New System.Windows.Forms.GroupBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MostrarVentanaTerapéutica = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Marca2 = New System.Windows.Forms.NumericUpDown()
+        Me.Marca2_visible = New System.Windows.Forms.CheckBox()
+        Me.Unidades2 = New System.Windows.Forms.Label()
+        Me.Marca2_Color = New System.Windows.Forms.ComboBox()
+        Me.Marca2_tamaño = New System.Windows.Forms.NumericUpDown()
+        Me.Marca2_label = New System.Windows.Forms.Label()
+        Me.Panel20 = New System.Windows.Forms.Panel()
+        Me.Marca3 = New System.Windows.Forms.NumericUpDown()
+        Me.Marca3_visible = New System.Windows.Forms.CheckBox()
+        Me.Unidades3 = New System.Windows.Forms.Label()
+        Me.Marca3_color = New System.Windows.Forms.ComboBox()
+        Me.Marca3_tamaño = New System.Windows.Forms.NumericUpDown()
+        Me.Marca3_label = New System.Windows.Forms.Label()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.Marca1 = New System.Windows.Forms.NumericUpDown()
+        Me.Unidades1 = New System.Windows.Forms.Label()
+        Me.Marca1_color = New System.Windows.Forms.ComboBox()
+        Me.Marca1_tamaño = New System.Windows.Forms.NumericUpDown()
+        Me.Marca1_visible = New System.Windows.Forms.CheckBox()
+        Me.Marca1_label = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.CD17 = New ControlActualizable.ControlDemostración()
@@ -113,35 +139,6 @@ Partial Class MainForm
         Me.Medicamento = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.GroupMarcas = New System.Windows.Forms.GroupBox()
-        Me.AdmonStart = New System.Windows.Forms.CheckBox()
-        Me.CT0 = New System.Windows.Forms.CheckBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.MostrarVentanaTerapéutica = New System.Windows.Forms.CheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel17 = New System.Windows.Forms.Panel()
-        Me.Marca2 = New System.Windows.Forms.NumericUpDown()
-        Me.Marca2_visible = New System.Windows.Forms.CheckBox()
-        Me.Unidades2 = New System.Windows.Forms.Label()
-        Me.Marca2_Color = New System.Windows.Forms.ComboBox()
-        Me.Marca2_tamaño = New System.Windows.Forms.NumericUpDown()
-        Me.Marca2_label = New System.Windows.Forms.Label()
-        Me.Panel20 = New System.Windows.Forms.Panel()
-        Me.Marca3 = New System.Windows.Forms.NumericUpDown()
-        Me.Marca3_visible = New System.Windows.Forms.CheckBox()
-        Me.Unidades3 = New System.Windows.Forms.Label()
-        Me.Marca3_color = New System.Windows.Forms.ComboBox()
-        Me.Marca3_tamaño = New System.Windows.Forms.NumericUpDown()
-        Me.Marca3_label = New System.Windows.Forms.Label()
-        Me.Panel16 = New System.Windows.Forms.Panel()
-        Me.Marca1 = New System.Windows.Forms.NumericUpDown()
-        Me.Unidades1 = New System.Windows.Forms.Label()
-        Me.Marca1_color = New System.Windows.Forms.ComboBox()
-        Me.Marca1_tamaño = New System.Windows.Forms.NumericUpDown()
-        Me.Marca1_visible = New System.Windows.Forms.CheckBox()
-        Me.Marca1_label = New System.Windows.Forms.Label()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Label65 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Pinned = New System.Windows.Forms.RadioButton()
@@ -188,6 +185,17 @@ Partial Class MainForm
         Me.GroupBox4.SuspendLayout()
         Me.MainTabControl.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.GroupMarcas.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel17.SuspendLayout()
+        CType(Me.Marca2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Marca2_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel20.SuspendLayout()
+        CType(Me.Marca3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Marca3_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel16.SuspendLayout()
+        CType(Me.Marca1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Marca1_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.CD17.SuspendLayout()
@@ -207,18 +215,6 @@ Partial Class MainForm
         CType(Me.VD_Num, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
         Me.TabPage3.SuspendLayout()
-        Me.GroupMarcas.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel17.SuspendLayout()
-        CType(Me.Marca2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Marca2_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel20.SuspendLayout()
-        CType(Me.Marca3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Marca3_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel16.SuspendLayout()
-        CType(Me.Marca1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Marca1_tamaño, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel22.SuspendLayout()
@@ -250,7 +246,7 @@ Partial Class MainForm
         Me.AxisColor.FormattingEnabled = True
         Me.AxisColor.Location = New System.Drawing.Point(38, 0)
         Me.AxisColor.Name = "AxisColor"
-        Me.AxisColor.Size = New System.Drawing.Size(232, 21)
+        Me.AxisColor.Size = New System.Drawing.Size(265, 21)
         Me.AxisColor.TabIndex = 0
         '
         'CD01
@@ -261,7 +257,7 @@ Partial Class MainForm
         Me.CD01.LabelIsVisible = False
         Me.CD01.Location = New System.Drawing.Point(3, 16)
         Me.CD01.Name = "CD01"
-        Me.CD01.Size = New System.Drawing.Size(270, 36)
+        Me.CD01.Size = New System.Drawing.Size(303, 36)
         Me.CD01.TabIndex = 0
         Me.CD01.Text = "Horas de estudio (h)"
         '
@@ -271,7 +267,7 @@ Partial Class MainForm
         Me.Horas_Estudio_Num.Location = New System.Drawing.Point(0, 0)
         Me.Horas_Estudio_Num.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Horas_Estudio_Num.Name = "Horas_Estudio_Num"
-        Me.Horas_Estudio_Num.Size = New System.Drawing.Size(270, 20)
+        Me.Horas_Estudio_Num.Size = New System.Drawing.Size(303, 20)
         Me.Horas_Estudio_Num.TabIndex = 1
         Me.Horas_Estudio_Num.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.Horas_Estudio_Num.Value = New Decimal(New Integer() {60, 0, 0, 0})
@@ -284,7 +280,7 @@ Partial Class MainForm
         Me.CD02.LabelIsVisible = False
         Me.CD02.Location = New System.Drawing.Point(3, 52)
         Me.CD02.Name = "CD02"
-        Me.CD02.Size = New System.Drawing.Size(270, 36)
+        Me.CD02.Size = New System.Drawing.Size(303, 36)
         Me.CD02.TabIndex = 1
         Me.CD02.Text = "Velocidad del trazo (h/s)"
         '
@@ -295,7 +291,7 @@ Partial Class MainForm
         Me.Velocidad_de_trazo.Location = New System.Drawing.Point(0, 0)
         Me.Velocidad_de_trazo.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Velocidad_de_trazo.Name = "Velocidad_de_trazo"
-        Me.Velocidad_de_trazo.Size = New System.Drawing.Size(270, 20)
+        Me.Velocidad_de_trazo.Size = New System.Drawing.Size(303, 20)
         Me.Velocidad_de_trazo.TabIndex = 1
         Me.Velocidad_de_trazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.Velocidad_de_trazo.Value = New Decimal(New Integer() {6, 0, 0, 0})
@@ -308,7 +304,7 @@ Partial Class MainForm
         Me.CD03.LabelIsVisible = False
         Me.CD03.Location = New System.Drawing.Point(3, 88)
         Me.CD03.Name = "CD03"
-        Me.CD03.Size = New System.Drawing.Size(270, 37)
+        Me.CD03.Size = New System.Drawing.Size(303, 37)
         Me.CD03.TabIndex = 2
         Me.CD03.Text = "Unidades"
         '
@@ -319,7 +315,7 @@ Partial Class MainForm
         Me.Unidades.FormattingEnabled = True
         Me.Unidades.Location = New System.Drawing.Point(0, 0)
         Me.Unidades.Name = "Unidades"
-        Me.Unidades.Size = New System.Drawing.Size(270, 21)
+        Me.Unidades.Size = New System.Drawing.Size(303, 21)
         Me.Unidades.TabIndex = 1
         '
         'CD04
@@ -330,7 +326,7 @@ Partial Class MainForm
         Me.CD04.LabelIsVisible = False
         Me.CD04.Location = New System.Drawing.Point(3, 16)
         Me.CD04.Name = "CD04"
-        Me.CD04.Size = New System.Drawing.Size(270, 36)
+        Me.CD04.Size = New System.Drawing.Size(303, 36)
         Me.CD04.TabIndex = 0
         Me.CD04.Text = "Dosis única (miligramos)"
         '
@@ -341,7 +337,7 @@ Partial Class MainForm
         Me.Dosis1.Location = New System.Drawing.Point(0, 0)
         Me.Dosis1.Maximum = New Decimal(New Integer() {1000000000, 0, 0, 0})
         Me.Dosis1.Name = "Dosis1"
-        Me.Dosis1.Size = New System.Drawing.Size(270, 20)
+        Me.Dosis1.Size = New System.Drawing.Size(303, 20)
         Me.Dosis1.TabIndex = 1
         Me.Dosis1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.Dosis1.Value = New Decimal(New Integer() {1000, 0, 0, 0})
@@ -354,7 +350,7 @@ Partial Class MainForm
         Me.CD05.LabelIsVisible = False
         Me.CD05.Location = New System.Drawing.Point(3, 33)
         Me.CD05.Name = "CD05"
-        Me.CD05.Size = New System.Drawing.Size(264, 36)
+        Me.CD05.Size = New System.Drawing.Size(297, 36)
         Me.CD05.TabIndex = 1
         Me.CD05.Text = "Intervalo de dosificación (h)"
         '
@@ -364,7 +360,7 @@ Partial Class MainForm
         Me.IntérvaloDosificaciónHoras.Location = New System.Drawing.Point(0, 0)
         Me.IntérvaloDosificaciónHoras.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.IntérvaloDosificaciónHoras.Name = "IntérvaloDosificaciónHoras"
-        Me.IntérvaloDosificaciónHoras.Size = New System.Drawing.Size(264, 20)
+        Me.IntérvaloDosificaciónHoras.Size = New System.Drawing.Size(297, 20)
         Me.IntérvaloDosificaciónHoras.TabIndex = 1
         Me.IntérvaloDosificaciónHoras.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.IntérvaloDosificaciónHoras.Value = New Decimal(New Integer() {8, 0, 0, 0})
@@ -377,7 +373,7 @@ Partial Class MainForm
         Me.CD06.LabelIsVisible = False
         Me.CD06.Location = New System.Drawing.Point(3, 69)
         Me.CD06.Name = "CD06"
-        Me.CD06.Size = New System.Drawing.Size(264, 36)
+        Me.CD06.Size = New System.Drawing.Size(297, 36)
         Me.CD06.TabIndex = 2
         Me.CD06.Text = "Intervalo de dosificación (min)"
         '
@@ -387,7 +383,7 @@ Partial Class MainForm
         Me.IntérvaloDosificaciónMinutos.Location = New System.Drawing.Point(0, 0)
         Me.IntérvaloDosificaciónMinutos.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.IntérvaloDosificaciónMinutos.Name = "IntérvaloDosificaciónMinutos"
-        Me.IntérvaloDosificaciónMinutos.Size = New System.Drawing.Size(264, 20)
+        Me.IntérvaloDosificaciónMinutos.Size = New System.Drawing.Size(297, 20)
         Me.IntérvaloDosificaciónMinutos.TabIndex = 1
         Me.IntérvaloDosificaciónMinutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -399,7 +395,7 @@ Partial Class MainForm
         Me.CD07.LabelIsVisible = False
         Me.CD07.Location = New System.Drawing.Point(3, 105)
         Me.CD07.Name = "CD07"
-        Me.CD07.Size = New System.Drawing.Size(264, 36)
+        Me.CD07.Size = New System.Drawing.Size(297, 36)
         Me.CD07.TabIndex = 3
         Me.CD07.Text = "Dosis totales"
         '
@@ -410,7 +406,7 @@ Partial Class MainForm
         Me.DosisTotalesNum.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.DosisTotalesNum.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.DosisTotalesNum.Name = "DosisTotalesNum"
-        Me.DosisTotalesNum.Size = New System.Drawing.Size(264, 20)
+        Me.DosisTotalesNum.Size = New System.Drawing.Size(297, 20)
         Me.DosisTotalesNum.TabIndex = 1
         Me.DosisTotalesNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.DosisTotalesNum.Value = New Decimal(New Integer() {10, 0, 0, 0})
@@ -425,7 +421,7 @@ Partial Class MainForm
         Me.CD08.LabelIsVisible = False
         Me.CD08.Location = New System.Drawing.Point(3, 158)
         Me.CD08.Name = "CD08"
-        Me.CD08.Size = New System.Drawing.Size(264, 40)
+        Me.CD08.Size = New System.Drawing.Size(297, 40)
         Me.CD08.TabIndex = 5
         Me.CD08.Text = "Dosis de carga (miligramos)"
         '
@@ -436,7 +432,7 @@ Partial Class MainForm
         Me.ChargeDose.Location = New System.Drawing.Point(0, 0)
         Me.ChargeDose.Maximum = New Decimal(New Integer() {10000000, 0, 0, 0})
         Me.ChargeDose.Name = "ChargeDose"
-        Me.ChargeDose.Size = New System.Drawing.Size(264, 20)
+        Me.ChargeDose.Size = New System.Drawing.Size(297, 20)
         Me.ChargeDose.TabIndex = 1
         Me.ChargeDose.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -448,7 +444,7 @@ Partial Class MainForm
         Me.ChargeDoseActive.ForeColor = System.Drawing.Color.White
         Me.ChargeDoseActive.Location = New System.Drawing.Point(3, 141)
         Me.ChargeDoseActive.Name = "ChargeDoseActive"
-        Me.ChargeDoseActive.Size = New System.Drawing.Size(264, 17)
+        Me.ChargeDoseActive.Size = New System.Drawing.Size(297, 17)
         Me.ChargeDoseActive.TabIndex = 4
         Me.ChargeDoseActive.Text = "Usar Dosis de carga"
         Me.ChargeDoseActive.UseVisualStyleBackColor = False
@@ -485,7 +481,7 @@ Partial Class MainForm
         'DiffSize
         '
         Me.DiffSize.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DiffSize.Location = New System.Drawing.Point(236, 0)
+        Me.DiffSize.Location = New System.Drawing.Point(269, 0)
         Me.DiffSize.Name = "DiffSize"
         Me.DiffSize.Size = New System.Drawing.Size(34, 20)
         Me.DiffSize.TabIndex = 3
@@ -498,7 +494,7 @@ Partial Class MainForm
         Me.DiffType.FormattingEnabled = True
         Me.DiffType.Location = New System.Drawing.Point(182, 0)
         Me.DiffType.Name = "DiffType"
-        Me.DiffType.Size = New System.Drawing.Size(54, 21)
+        Me.DiffType.Size = New System.Drawing.Size(87, 21)
         Me.DiffType.TabIndex = 2
         '
         'Fondo
@@ -508,7 +504,7 @@ Partial Class MainForm
         Me.Fondo.FormattingEnabled = True
         Me.Fondo.Location = New System.Drawing.Point(38, 0)
         Me.Fondo.Name = "Fondo"
-        Me.Fondo.Size = New System.Drawing.Size(232, 21)
+        Me.Fondo.Size = New System.Drawing.Size(265, 21)
         Me.Fondo.TabIndex = 0
         '
         'GroupBox1
@@ -528,7 +524,7 @@ Partial Class MainForm
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(276, 248)
+        Me.GroupBox1.Size = New System.Drawing.Size(309, 248)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Características del gráfico"
@@ -539,7 +535,7 @@ Partial Class MainForm
         Me.Label64.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label64.Location = New System.Drawing.Point(3, 17)
         Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(270, 13)
+        Me.Label64.Size = New System.Drawing.Size(303, 13)
         Me.Label64.TabIndex = 0
         Me.Label64.Text = "Color de fondo"
         '
@@ -551,7 +547,7 @@ Partial Class MainForm
         Me.Panel31.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel31.Location = New System.Drawing.Point(3, 30)
         Me.Panel31.Name = "Panel31"
-        Me.Panel31.Size = New System.Drawing.Size(270, 25)
+        Me.Panel31.Size = New System.Drawing.Size(303, 25)
         Me.Panel31.TabIndex = 0
         '
         'Label73
@@ -570,7 +566,7 @@ Partial Class MainForm
         Me.Label26.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label26.Location = New System.Drawing.Point(3, 55)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(270, 13)
+        Me.Label26.Size = New System.Drawing.Size(303, 13)
         Me.Label26.TabIndex = 2
         Me.Label26.Text = "Color del eje principal"
         '
@@ -582,7 +578,7 @@ Partial Class MainForm
         Me.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel12.Location = New System.Drawing.Point(3, 68)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(270, 25)
+        Me.Panel12.Size = New System.Drawing.Size(303, 25)
         Me.Panel12.TabIndex = 1
         '
         'Label32
@@ -601,7 +597,7 @@ Partial Class MainForm
         Me.Label29.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label29.Location = New System.Drawing.Point(3, 93)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(270, 13)
+        Me.Label29.Size = New System.Drawing.Size(303, 13)
         Me.Label29.TabIndex = 4
         Me.Label29.Text = "Trazo con absorción"
         '
@@ -616,7 +612,7 @@ Partial Class MainForm
         Me.Panel11.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel11.Location = New System.Drawing.Point(3, 106)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(270, 25)
+        Me.Panel11.Size = New System.Drawing.Size(303, 25)
         Me.Panel11.TabIndex = 2
         '
         'LineType
@@ -626,7 +622,7 @@ Partial Class MainForm
         Me.LineType.FormattingEnabled = True
         Me.LineType.Location = New System.Drawing.Point(182, 0)
         Me.LineType.Name = "LineType"
-        Me.LineType.Size = New System.Drawing.Size(54, 21)
+        Me.LineType.Size = New System.Drawing.Size(87, 21)
         Me.LineType.TabIndex = 1
         '
         'Label30
@@ -662,11 +658,11 @@ Partial Class MainForm
         'LineSize
         '
         Me.LineSize.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LineSize.Location = New System.Drawing.Point(236, 0)
+        Me.LineSize.Location = New System.Drawing.Point(269, 0)
         Me.LineSize.Name = "LineSize"
         Me.LineSize.Size = New System.Drawing.Size(34, 20)
         Me.LineSize.TabIndex = 2
-        Me.LineSize.Value = New Decimal(New Integer() {2, 0, 0, 0})
+        Me.LineSize.Value = New Decimal(New Integer() {4, 0, 0, 0})
         '
         'Label37
         '
@@ -674,7 +670,7 @@ Partial Class MainForm
         Me.Label37.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label37.Location = New System.Drawing.Point(3, 131)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(270, 13)
+        Me.Label37.Size = New System.Drawing.Size(303, 13)
         Me.Label37.TabIndex = 6
         Me.Label37.Text = "Trazo sin absorción"
         '
@@ -689,7 +685,7 @@ Partial Class MainForm
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel15.Location = New System.Drawing.Point(3, 144)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(270, 25)
+        Me.Panel15.Size = New System.Drawing.Size(303, 25)
         Me.Panel15.TabIndex = 3
         '
         'Label39
@@ -705,6 +701,8 @@ Partial Class MainForm
         'UsarDiferencial
         '
         Me.UsarDiferencial.AutoSize = True
+        Me.UsarDiferencial.Checked = True
+        Me.UsarDiferencial.CheckState = System.Windows.Forms.CheckState.Checked
         Me.UsarDiferencial.Dock = System.Windows.Forms.DockStyle.Left
         Me.UsarDiferencial.Location = New System.Drawing.Point(0, 0)
         Me.UsarDiferencial.Name = "UsarDiferencial"
@@ -719,7 +717,7 @@ Partial Class MainForm
         Me.Label22.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Label22.Location = New System.Drawing.Point(3, 169)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(270, 13)
+        Me.Label22.Size = New System.Drawing.Size(303, 13)
         Me.Label22.TabIndex = 8
         Me.Label22.Text = "Miscelaneo"
         '
@@ -730,7 +728,7 @@ Partial Class MainForm
         Me.Panel26.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel26.Location = New System.Drawing.Point(3, 182)
         Me.Panel26.Name = "Panel26"
-        Me.Panel26.Size = New System.Drawing.Size(270, 25)
+        Me.Panel26.Size = New System.Drawing.Size(303, 25)
         Me.Panel26.TabIndex = 4
         '
         'SoloEliminación
@@ -739,9 +737,9 @@ Partial Class MainForm
         Me.SoloEliminación.Dock = System.Windows.Forms.DockStyle.Left
         Me.SoloEliminación.Location = New System.Drawing.Point(0, 0)
         Me.SoloEliminación.Name = "SoloEliminación"
-        Me.SoloEliminación.Size = New System.Drawing.Size(179, 25)
+        Me.SoloEliminación.Size = New System.Drawing.Size(138, 25)
         Me.SoloEliminación.TabIndex = 0
-        Me.SoloEliminación.Text = "Únicamente trazo de eliminación"
+        Me.SoloEliminación.Text = "Únicamente eliminación"
         Me.SoloEliminación.UseVisualStyleBackColor = True
         '
         'Label36
@@ -751,7 +749,7 @@ Partial Class MainForm
         Me.Label36.ForeColor = System.Drawing.Color.White
         Me.Label36.Location = New System.Drawing.Point(3, 207)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(270, 13)
+        Me.Label36.Size = New System.Drawing.Size(303, 13)
         Me.Label36.TabIndex = 10
         Me.Label36.Text = "Herramientas"
         '
@@ -765,7 +763,7 @@ Partial Class MainForm
         Me.Panel14.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel14.Location = New System.Drawing.Point(3, 220)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(270, 25)
+        Me.Panel14.Size = New System.Drawing.Size(303, 25)
         Me.Panel14.TabIndex = 5
         '
         'MaxColor
@@ -775,7 +773,7 @@ Partial Class MainForm
         Me.MaxColor.FormattingEnabled = True
         Me.MaxColor.Location = New System.Drawing.Point(123, 0)
         Me.MaxColor.Name = "MaxColor"
-        Me.MaxColor.Size = New System.Drawing.Size(96, 21)
+        Me.MaxColor.Size = New System.Drawing.Size(129, 21)
         Me.MaxColor.TabIndex = 1
         '
         'Log
@@ -783,7 +781,7 @@ Partial Class MainForm
         Me.Log.AutoSize = True
         Me.Log.Dock = System.Windows.Forms.DockStyle.Right
         Me.Log.ForeColor = System.Drawing.Color.White
-        Me.Log.Location = New System.Drawing.Point(219, 0)
+        Me.Log.Location = New System.Drawing.Point(252, 0)
         Me.Log.Name = "Log"
         Me.Log.Size = New System.Drawing.Size(51, 25)
         Me.Log.TabIndex = 2
@@ -810,7 +808,7 @@ Partial Class MainForm
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(3, 132)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(276, 266)
+        Me.GroupBox2.Size = New System.Drawing.Size(309, 266)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Esquemas de dosificación"
@@ -828,7 +826,7 @@ Partial Class MainForm
         Me.GroupBox5.ForeColor = System.Drawing.Color.Black
         Me.GroupBox5.Location = New System.Drawing.Point(3, 52)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(270, 204)
+        Me.GroupBox5.Size = New System.Drawing.Size(303, 204)
         Me.GroupBox5.TabIndex = 1
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Dosis múltiples"
@@ -841,7 +839,7 @@ Partial Class MainForm
         Me.MúltiplesDosis.ForeColor = System.Drawing.Color.Black
         Me.MúltiplesDosis.Location = New System.Drawing.Point(3, 16)
         Me.MúltiplesDosis.Name = "MúltiplesDosis"
-        Me.MúltiplesDosis.Size = New System.Drawing.Size(264, 17)
+        Me.MúltiplesDosis.Size = New System.Drawing.Size(297, 17)
         Me.MúltiplesDosis.TabIndex = 0
         Me.MúltiplesDosis.Text = "Activar dosificación múltiple"
         Me.MúltiplesDosis.UseVisualStyleBackColor = False
@@ -855,7 +853,7 @@ Partial Class MainForm
         Me.GroupBox4.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox4.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(276, 129)
+        Me.GroupBox4.Size = New System.Drawing.Size(309, 129)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Diseño del estudio"
@@ -883,7 +881,7 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(290, 13)
+        Me.Label1.Size = New System.Drawing.Size(323, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Datos mostrados con el cursor"
         '
@@ -917,11 +915,19 @@ Partial Class MainForm
         Me.Label3.Text = "Tipo de cursor"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label65
+        '
+        Me.Label65.Location = New System.Drawing.Point(100, 322)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(186, 160)
+        Me.Label65.TabIndex = 2
+        Me.Label65.Text = resources.GetString("Label65.Text")
+        '
         'Libre
         '
         Me.Libre.AutoSize = True
         Me.Libre.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Libre.Location = New System.Drawing.Point(143, 0)
+        Me.Libre.Location = New System.Drawing.Point(176, 0)
         Me.Libre.Name = "Libre"
         Me.Libre.Size = New System.Drawing.Size(48, 21)
         Me.Libre.TabIndex = 0
@@ -933,26 +939,323 @@ Partial Class MainForm
         Me.MainTabControl.Controls.Add(Me.TabPage2)
         Me.MainTabControl.Controls.Add(Me.TabPage1)
         Me.MainTabControl.Controls.Add(Me.TabPage3)
-        Me.MainTabControl.Controls.Add(Me.TabPage4)
         Me.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainTabControl.Location = New System.Drawing.Point(0, 0)
         Me.MainTabControl.Name = "MainTabControl"
         Me.MainTabControl.SelectedIndex = 0
-        Me.MainTabControl.Size = New System.Drawing.Size(290, 588)
+        Me.MainTabControl.Size = New System.Drawing.Size(323, 604)
         Me.MainTabControl.TabIndex = 0
         '
         'TabPage2
         '
         Me.TabPage2.AutoScroll = True
+        Me.TabPage2.Controls.Add(Me.GroupMarcas)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox4)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(282, 562)
+        Me.TabPage2.Size = New System.Drawing.Size(315, 578)
         Me.TabPage2.TabIndex = 0
         Me.TabPage2.Text = "Diseño experimental"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'GroupMarcas
+        '
+        Me.GroupMarcas.Controls.Add(Me.Panel2)
+        Me.GroupMarcas.Controls.Add(Me.Label2)
+        Me.GroupMarcas.Controls.Add(Me.Panel17)
+        Me.GroupMarcas.Controls.Add(Me.Marca2_label)
+        Me.GroupMarcas.Controls.Add(Me.Panel20)
+        Me.GroupMarcas.Controls.Add(Me.Marca3_label)
+        Me.GroupMarcas.Controls.Add(Me.Panel16)
+        Me.GroupMarcas.Controls.Add(Me.Marca1_label)
+        Me.GroupMarcas.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupMarcas.Location = New System.Drawing.Point(3, 398)
+        Me.GroupMarcas.Name = "GroupMarcas"
+        Me.GroupMarcas.Size = New System.Drawing.Size(309, 173)
+        Me.GroupMarcas.TabIndex = 2
+        Me.GroupMarcas.TabStop = False
+        Me.GroupMarcas.Text = "Valores de referencia"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Blue
+        Me.Panel2.Controls.Add(Me.MostrarVentanaTerapéutica)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(3, 134)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(303, 22)
+        Me.Panel2.TabIndex = 3
+        '
+        'MostrarVentanaTerapéutica
+        '
+        Me.MostrarVentanaTerapéutica.AutoSize = True
+        Me.MostrarVentanaTerapéutica.Dock = System.Windows.Forms.DockStyle.Left
+        Me.MostrarVentanaTerapéutica.Location = New System.Drawing.Point(0, 0)
+        Me.MostrarVentanaTerapéutica.Name = "MostrarVentanaTerapéutica"
+        Me.MostrarVentanaTerapéutica.Size = New System.Drawing.Size(205, 22)
+        Me.MostrarVentanaTerapéutica.TabIndex = 3
+        Me.MostrarVentanaTerapéutica.Text = "Mostrar ventana terapéutica completa"
+        Me.MostrarVentanaTerapéutica.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.Blue
+        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(3, 121)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(303, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Otras opciones"
+        '
+        'Panel17
+        '
+        Me.Panel17.BackColor = System.Drawing.Color.Blue
+        Me.Panel17.Controls.Add(Me.Marca2)
+        Me.Panel17.Controls.Add(Me.Marca2_visible)
+        Me.Panel17.Controls.Add(Me.Unidades2)
+        Me.Panel17.Controls.Add(Me.Marca2_Color)
+        Me.Panel17.Controls.Add(Me.Marca2_tamaño)
+        Me.Panel17.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel17.ForeColor = System.Drawing.Color.White
+        Me.Panel17.Location = New System.Drawing.Point(3, 99)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(303, 22)
+        Me.Panel17.TabIndex = 2
+        '
+        'Marca2
+        '
+        Me.Marca2.DecimalPlaces = 1
+        Me.Marca2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Marca2.Location = New System.Drawing.Point(61, 0)
+        Me.Marca2.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
+        Me.Marca2.Name = "Marca2"
+        Me.Marca2.Size = New System.Drawing.Size(81, 20)
+        Me.Marca2.TabIndex = 1
+        Me.Marca2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Marca2.Value = New Decimal(New Integer() {2, 0, 0, 65536})
+        '
+        'Marca2_visible
+        '
+        Me.Marca2_visible.AutoSize = True
+        Me.Marca2_visible.Checked = True
+        Me.Marca2_visible.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Marca2_visible.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Marca2_visible.Location = New System.Drawing.Point(0, 0)
+        Me.Marca2_visible.Name = "Marca2_visible"
+        Me.Marca2_visible.Size = New System.Drawing.Size(61, 22)
+        Me.Marca2_visible.TabIndex = 0
+        Me.Marca2_visible.Text = "Mostrar"
+        Me.Marca2_visible.UseVisualStyleBackColor = True
+        '
+        'Unidades2
+        '
+        Me.Unidades2.AutoSize = True
+        Me.Unidades2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Unidades2.Location = New System.Drawing.Point(142, 0)
+        Me.Unidades2.Name = "Unidades2"
+        Me.Unidades2.Size = New System.Drawing.Size(24, 13)
+        Me.Unidades2.TabIndex = 2
+        Me.Unidades2.Text = "g/L"
+        Me.Unidades2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Marca2_Color
+        '
+        Me.Marca2_Color.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca2_Color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Marca2_Color.FormattingEnabled = True
+        Me.Marca2_Color.Location = New System.Drawing.Point(166, 0)
+        Me.Marca2_Color.Name = "Marca2_Color"
+        Me.Marca2_Color.Size = New System.Drawing.Size(97, 21)
+        Me.Marca2_Color.TabIndex = 2
+        '
+        'Marca2_tamaño
+        '
+        Me.Marca2_tamaño.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca2_tamaño.Location = New System.Drawing.Point(263, 0)
+        Me.Marca2_tamaño.Name = "Marca2_tamaño"
+        Me.Marca2_tamaño.Size = New System.Drawing.Size(40, 20)
+        Me.Marca2_tamaño.TabIndex = 3
+        Me.Marca2_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.Marca2_tamaño.Visible = False
+        '
+        'Marca2_label
+        '
+        Me.Marca2_label.BackColor = System.Drawing.Color.Blue
+        Me.Marca2_label.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Marca2_label.ForeColor = System.Drawing.Color.White
+        Me.Marca2_label.Location = New System.Drawing.Point(3, 86)
+        Me.Marca2_label.Name = "Marca2_label"
+        Me.Marca2_label.Size = New System.Drawing.Size(303, 13)
+        Me.Marca2_label.TabIndex = 3
+        Me.Marca2_label.Text = "Concentración tóxica"
+        '
+        'Panel20
+        '
+        Me.Panel20.BackColor = System.Drawing.Color.Blue
+        Me.Panel20.Controls.Add(Me.Marca3)
+        Me.Panel20.Controls.Add(Me.Marca3_visible)
+        Me.Panel20.Controls.Add(Me.Unidades3)
+        Me.Panel20.Controls.Add(Me.Marca3_color)
+        Me.Panel20.Controls.Add(Me.Marca3_tamaño)
+        Me.Panel20.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel20.ForeColor = System.Drawing.Color.White
+        Me.Panel20.Location = New System.Drawing.Point(3, 64)
+        Me.Panel20.Name = "Panel20"
+        Me.Panel20.Size = New System.Drawing.Size(303, 22)
+        Me.Panel20.TabIndex = 1
+        '
+        'Marca3
+        '
+        Me.Marca3.DecimalPlaces = 1
+        Me.Marca3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Marca3.Location = New System.Drawing.Point(61, 0)
+        Me.Marca3.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
+        Me.Marca3.Name = "Marca3"
+        Me.Marca3.Size = New System.Drawing.Size(81, 20)
+        Me.Marca3.TabIndex = 1
+        Me.Marca3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Marca3.Value = New Decimal(New Integer() {2, 0, 0, 0})
+        '
+        'Marca3_visible
+        '
+        Me.Marca3_visible.AutoSize = True
+        Me.Marca3_visible.Checked = True
+        Me.Marca3_visible.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Marca3_visible.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Marca3_visible.Location = New System.Drawing.Point(0, 0)
+        Me.Marca3_visible.Name = "Marca3_visible"
+        Me.Marca3_visible.Size = New System.Drawing.Size(61, 22)
+        Me.Marca3_visible.TabIndex = 0
+        Me.Marca3_visible.Text = "Mostrar"
+        Me.Marca3_visible.UseVisualStyleBackColor = True
+        '
+        'Unidades3
+        '
+        Me.Unidades3.AutoSize = True
+        Me.Unidades3.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Unidades3.Location = New System.Drawing.Point(142, 0)
+        Me.Unidades3.Name = "Unidades3"
+        Me.Unidades3.Size = New System.Drawing.Size(24, 13)
+        Me.Unidades3.TabIndex = 2
+        Me.Unidades3.Text = "g/L"
+        Me.Unidades3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Marca3_color
+        '
+        Me.Marca3_color.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca3_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Marca3_color.FormattingEnabled = True
+        Me.Marca3_color.Location = New System.Drawing.Point(166, 0)
+        Me.Marca3_color.Name = "Marca3_color"
+        Me.Marca3_color.Size = New System.Drawing.Size(97, 21)
+        Me.Marca3_color.TabIndex = 2
+        '
+        'Marca3_tamaño
+        '
+        Me.Marca3_tamaño.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca3_tamaño.Location = New System.Drawing.Point(263, 0)
+        Me.Marca3_tamaño.Name = "Marca3_tamaño"
+        Me.Marca3_tamaño.Size = New System.Drawing.Size(40, 20)
+        Me.Marca3_tamaño.TabIndex = 3
+        Me.Marca3_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.Marca3_tamaño.Visible = False
+        '
+        'Marca3_label
+        '
+        Me.Marca3_label.BackColor = System.Drawing.Color.Blue
+        Me.Marca3_label.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Marca3_label.ForeColor = System.Drawing.Color.White
+        Me.Marca3_label.Location = New System.Drawing.Point(3, 51)
+        Me.Marca3_label.Name = "Marca3_label"
+        Me.Marca3_label.Size = New System.Drawing.Size(303, 13)
+        Me.Marca3_label.TabIndex = 5
+        Me.Marca3_label.Text = "Concentración máxima recomendada"
+        '
+        'Panel16
+        '
+        Me.Panel16.BackColor = System.Drawing.Color.Blue
+        Me.Panel16.Controls.Add(Me.Marca1)
+        Me.Panel16.Controls.Add(Me.Unidades1)
+        Me.Panel16.Controls.Add(Me.Marca1_color)
+        Me.Panel16.Controls.Add(Me.Marca1_tamaño)
+        Me.Panel16.Controls.Add(Me.Marca1_visible)
+        Me.Panel16.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel16.ForeColor = System.Drawing.Color.White
+        Me.Panel16.Location = New System.Drawing.Point(3, 29)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(303, 22)
+        Me.Panel16.TabIndex = 0
+        '
+        'Marca1
+        '
+        Me.Marca1.DecimalPlaces = 1
+        Me.Marca1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Marca1.Location = New System.Drawing.Point(61, 0)
+        Me.Marca1.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
+        Me.Marca1.Name = "Marca1"
+        Me.Marca1.Size = New System.Drawing.Size(81, 20)
+        Me.Marca1.TabIndex = 1
+        Me.Marca1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Marca1.Value = New Decimal(New Integer() {8, 0, 0, 65536})
+        '
+        'Unidades1
+        '
+        Me.Unidades1.AutoSize = True
+        Me.Unidades1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Unidades1.Location = New System.Drawing.Point(142, 0)
+        Me.Unidades1.Name = "Unidades1"
+        Me.Unidades1.Size = New System.Drawing.Size(24, 13)
+        Me.Unidades1.TabIndex = 1
+        Me.Unidades1.Text = "g/L"
+        Me.Unidades1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Marca1_color
+        '
+        Me.Marca1_color.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca1_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Marca1_color.FormattingEnabled = True
+        Me.Marca1_color.Location = New System.Drawing.Point(166, 0)
+        Me.Marca1_color.Name = "Marca1_color"
+        Me.Marca1_color.Size = New System.Drawing.Size(97, 21)
+        Me.Marca1_color.TabIndex = 2
+        '
+        'Marca1_tamaño
+        '
+        Me.Marca1_tamaño.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Marca1_tamaño.Location = New System.Drawing.Point(263, 0)
+        Me.Marca1_tamaño.Name = "Marca1_tamaño"
+        Me.Marca1_tamaño.Size = New System.Drawing.Size(40, 20)
+        Me.Marca1_tamaño.TabIndex = 3
+        Me.Marca1_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.Marca1_tamaño.Visible = False
+        '
+        'Marca1_visible
+        '
+        Me.Marca1_visible.AutoSize = True
+        Me.Marca1_visible.Checked = True
+        Me.Marca1_visible.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.Marca1_visible.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Marca1_visible.Location = New System.Drawing.Point(0, 0)
+        Me.Marca1_visible.Name = "Marca1_visible"
+        Me.Marca1_visible.Size = New System.Drawing.Size(61, 22)
+        Me.Marca1_visible.TabIndex = 0
+        Me.Marca1_visible.Text = "Mostrar"
+        Me.Marca1_visible.UseVisualStyleBackColor = True
+        '
+        'Marca1_label
+        '
+        Me.Marca1_label.BackColor = System.Drawing.Color.Blue
+        Me.Marca1_label.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Marca1_label.ForeColor = System.Drawing.Color.White
+        Me.Marca1_label.Location = New System.Drawing.Point(3, 16)
+        Me.Marca1_label.Name = "Marca1_label"
+        Me.Marca1_label.Size = New System.Drawing.Size(303, 13)
+        Me.Marca1_label.TabIndex = 7
+        Me.Marca1_label.Text = "Concentración mínima eficaz"
         '
         'TabPage1
         '
@@ -960,9 +1263,9 @@ Partial Class MainForm
         Me.TabPage1.Controls.Add(Me.GroupBox6)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(282, 562)
+        Me.TabPage1.Size = New System.Drawing.Size(315, 562)
         Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "Parámetros"
+        Me.TabPage1.Text = "Parámetros..."
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -981,7 +1284,7 @@ Partial Class MainForm
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(0, 94)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(282, 346)
+        Me.GroupBox3.Size = New System.Drawing.Size(315, 346)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Parámetros Farmacocinéticos"
@@ -994,7 +1297,7 @@ Partial Class MainForm
         Me.CD17.LabelIsVisible = False
         Me.CD17.Location = New System.Drawing.Point(3, 305)
         Me.CD17.Name = "CD17"
-        Me.CD17.Size = New System.Drawing.Size(276, 35)
+        Me.CD17.Size = New System.Drawing.Size(309, 35)
         Me.CD17.TabIndex = 9
         Me.CD17.TabStop = False
         Me.CD17.Text = "Tiempo de liberación (minutos)"
@@ -1006,7 +1309,7 @@ Partial Class MainForm
         Me.t_lag.Location = New System.Drawing.Point(0, 0)
         Me.t_lag.Maximum = New Decimal(New Integer() {600, 0, 0, 0})
         Me.t_lag.Name = "t_lag"
-        Me.t_lag.Size = New System.Drawing.Size(276, 20)
+        Me.t_lag.Size = New System.Drawing.Size(309, 20)
         Me.t_lag.TabIndex = 1
         Me.t_lag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.t_lag.Value = New Decimal(New Integer() {1, 0, 0, 0})
@@ -1019,7 +1322,7 @@ Partial Class MainForm
         Me.CD16.LabelIsVisible = False
         Me.CD16.Location = New System.Drawing.Point(3, 269)
         Me.CD16.Name = "CD16"
-        Me.CD16.Size = New System.Drawing.Size(276, 36)
+        Me.CD16.Size = New System.Drawing.Size(309, 36)
         Me.CD16.TabIndex = 8
         Me.CD16.Text = "Vida media de eliminación"
         '
@@ -1028,7 +1331,7 @@ Partial Class MainForm
         Me.VME.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VME.Location = New System.Drawing.Point(0, 0)
         Me.VME.Name = "VME"
-        Me.VME.Size = New System.Drawing.Size(276, 20)
+        Me.VME.Size = New System.Drawing.Size(309, 20)
         Me.VME.TabIndex = 1
         '
         'CD15
@@ -1039,7 +1342,7 @@ Partial Class MainForm
         Me.CD15.LabelIsVisible = False
         Me.CD15.Location = New System.Drawing.Point(3, 233)
         Me.CD15.Name = "CD15"
-        Me.CD15.Size = New System.Drawing.Size(276, 36)
+        Me.CD15.Size = New System.Drawing.Size(309, 36)
         Me.CD15.TabIndex = 7
         Me.CD15.Text = "Vida media de absorción"
         '
@@ -1048,7 +1351,7 @@ Partial Class MainForm
         Me.VMA.Dock = System.Windows.Forms.DockStyle.Fill
         Me.VMA.Location = New System.Drawing.Point(0, 0)
         Me.VMA.Name = "VMA"
-        Me.VMA.Size = New System.Drawing.Size(276, 20)
+        Me.VMA.Size = New System.Drawing.Size(309, 20)
         Me.VMA.TabIndex = 1
         '
         'CD14
@@ -1059,7 +1362,7 @@ Partial Class MainForm
         Me.CD14.LabelIsVisible = False
         Me.CD14.Location = New System.Drawing.Point(3, 197)
         Me.CD14.Name = "CD14"
-        Me.CD14.Size = New System.Drawing.Size(276, 36)
+        Me.CD14.Size = New System.Drawing.Size(309, 36)
         Me.CD14.TabIndex = 6
         Me.CD14.Text = "Velocidad Máxima de Eliminación (mg/dl-h)"
         '
@@ -1071,7 +1374,7 @@ Partial Class MainForm
         Me.VelocidadMaximaEliminación.Location = New System.Drawing.Point(0, 0)
         Me.VelocidadMaximaEliminación.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.VelocidadMaximaEliminación.Name = "VelocidadMaximaEliminación"
-        Me.VelocidadMaximaEliminación.Size = New System.Drawing.Size(276, 20)
+        Me.VelocidadMaximaEliminación.Size = New System.Drawing.Size(309, 20)
         Me.VelocidadMaximaEliminación.TabIndex = 1
         Me.VelocidadMaximaEliminación.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.VelocidadMaximaEliminación.Value = New Decimal(New Integer() {1, 0, 0, 131072})
@@ -1084,7 +1387,7 @@ Partial Class MainForm
         Me.CD13.LabelIsVisible = False
         Me.CD13.Location = New System.Drawing.Point(3, 160)
         Me.CD13.Name = "CD13"
-        Me.CD13.Size = New System.Drawing.Size(276, 37)
+        Me.CD13.Size = New System.Drawing.Size(309, 37)
         Me.CD13.TabIndex = 5
         Me.CD13.Text = "Tipo de eliminación"
         '
@@ -1095,7 +1398,7 @@ Partial Class MainForm
         Me.TipoEliminación.FormattingEnabled = True
         Me.TipoEliminación.Location = New System.Drawing.Point(0, 0)
         Me.TipoEliminación.Name = "TipoEliminación"
-        Me.TipoEliminación.Size = New System.Drawing.Size(276, 21)
+        Me.TipoEliminación.Size = New System.Drawing.Size(309, 21)
         Me.TipoEliminación.TabIndex = 1
         '
         'CD12
@@ -1106,7 +1409,7 @@ Partial Class MainForm
         Me.CD12.LabelIsVisible = False
         Me.CD12.Location = New System.Drawing.Point(3, 124)
         Me.CD12.Name = "CD12"
-        Me.CD12.Size = New System.Drawing.Size(276, 36)
+        Me.CD12.Size = New System.Drawing.Size(309, 36)
         Me.CD12.TabIndex = 4
         Me.CD12.Text = "Constante de eliminación Ke (1/h)"
         '
@@ -1118,7 +1421,7 @@ Partial Class MainForm
         Me.Eliminación.Location = New System.Drawing.Point(0, 0)
         Me.Eliminación.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Eliminación.Name = "Eliminación"
-        Me.Eliminación.Size = New System.Drawing.Size(276, 20)
+        Me.Eliminación.Size = New System.Drawing.Size(309, 20)
         Me.Eliminación.TabIndex = 1
         Me.Eliminación.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.Eliminación.Value = New Decimal(New Integer() {1, 0, 0, 65536})
@@ -1131,7 +1434,7 @@ Partial Class MainForm
         Me.CD11.LabelIsVisible = False
         Me.CD11.Location = New System.Drawing.Point(3, 88)
         Me.CD11.Name = "CD11"
-        Me.CD11.Size = New System.Drawing.Size(276, 36)
+        Me.CD11.Size = New System.Drawing.Size(309, 36)
         Me.CD11.TabIndex = 3
         Me.CD11.Text = "Constante de absorción Ka (1/h)"
         '
@@ -1143,7 +1446,7 @@ Partial Class MainForm
         Me.Absorción.Location = New System.Drawing.Point(0, 0)
         Me.Absorción.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.Absorción.Name = "Absorción"
-        Me.Absorción.Size = New System.Drawing.Size(276, 20)
+        Me.Absorción.Size = New System.Drawing.Size(309, 20)
         Me.Absorción.TabIndex = 1
         Me.Absorción.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.Absorción.Value = New Decimal(New Integer() {3, 0, 0, 131072})
@@ -1156,7 +1459,7 @@ Partial Class MainForm
         Me.CD10.LabelIsVisible = False
         Me.CD10.Location = New System.Drawing.Point(3, 52)
         Me.CD10.Name = "CD10"
-        Me.CD10.Size = New System.Drawing.Size(276, 36)
+        Me.CD10.Size = New System.Drawing.Size(309, 36)
         Me.CD10.TabIndex = 2
         Me.CD10.Text = "Biodisponibilidad F (%)"
         '
@@ -1167,7 +1470,7 @@ Partial Class MainForm
         Me.BD.Location = New System.Drawing.Point(0, 0)
         Me.BD.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.BD.Name = "BD"
-        Me.BD.Size = New System.Drawing.Size(276, 20)
+        Me.BD.Size = New System.Drawing.Size(309, 20)
         Me.BD.TabIndex = 1
         Me.BD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.BD.Value = New Decimal(New Integer() {100, 0, 0, 0})
@@ -1180,7 +1483,7 @@ Partial Class MainForm
         Me.CD09.LabelIsVisible = False
         Me.CD09.Location = New System.Drawing.Point(3, 16)
         Me.CD09.Name = "CD09"
-        Me.CD09.Size = New System.Drawing.Size(276, 36)
+        Me.CD09.Size = New System.Drawing.Size(309, 36)
         Me.CD09.TabIndex = 1
         Me.CD09.Text = "Volumen de distribución aparente Vda (L)"
         '
@@ -1191,7 +1494,7 @@ Partial Class MainForm
         Me.VD_Num.Location = New System.Drawing.Point(0, 0)
         Me.VD_Num.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
         Me.VD_Num.Name = "VD_Num"
-        Me.VD_Num.Size = New System.Drawing.Size(276, 20)
+        Me.VD_Num.Size = New System.Drawing.Size(309, 20)
         Me.VD_Num.TabIndex = 1
         Me.VD_Num.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.VD_Num.Value = New Decimal(New Integer() {60, 0, 0, 0})
@@ -1206,7 +1509,7 @@ Partial Class MainForm
         Me.GroupBox6.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox6.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(282, 94)
+        Me.GroupBox6.Size = New System.Drawing.Size(315, 94)
         Me.GroupBox6.TabIndex = 6
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Prediseñados"
@@ -1218,7 +1521,7 @@ Partial Class MainForm
         Me.Administración.FormattingEnabled = True
         Me.Administración.Location = New System.Drawing.Point(3, 63)
         Me.Administración.Name = "Administración"
-        Me.Administración.Size = New System.Drawing.Size(276, 21)
+        Me.Administración.Size = New System.Drawing.Size(309, 21)
         Me.Administración.TabIndex = 7
         '
         'Label5
@@ -1238,7 +1541,7 @@ Partial Class MainForm
         Me.Medicamento.FormattingEnabled = True
         Me.Medicamento.Location = New System.Drawing.Point(3, 29)
         Me.Medicamento.Name = "Medicamento"
-        Me.Medicamento.Size = New System.Drawing.Size(276, 21)
+        Me.Medicamento.Size = New System.Drawing.Size(309, 21)
         Me.Medicamento.TabIndex = 5
         '
         'Label4
@@ -1253,360 +1556,25 @@ Partial Class MainForm
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.GroupMarcas)
+        Me.TabPage3.Controls.Add(Me.Label65)
+        Me.TabPage3.Controls.Add(Me.PictureBox1)
         Me.TabPage3.Controls.Add(Me.GroupBox1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(282, 562)
+        Me.TabPage3.Size = New System.Drawing.Size(315, 562)
         Me.TabPage3.TabIndex = 1
-        Me.TabPage3.Text = "Gráfico"
+        Me.TabPage3.Text = "Características del  gráfico"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'GroupMarcas
-        '
-        Me.GroupMarcas.Controls.Add(Me.AdmonStart)
-        Me.GroupMarcas.Controls.Add(Me.CT0)
-        Me.GroupMarcas.Controls.Add(Me.Panel2)
-        Me.GroupMarcas.Controls.Add(Me.Label2)
-        Me.GroupMarcas.Controls.Add(Me.Panel17)
-        Me.GroupMarcas.Controls.Add(Me.Marca2_label)
-        Me.GroupMarcas.Controls.Add(Me.Panel20)
-        Me.GroupMarcas.Controls.Add(Me.Marca3_label)
-        Me.GroupMarcas.Controls.Add(Me.Panel16)
-        Me.GroupMarcas.Controls.Add(Me.Marca1_label)
-        Me.GroupMarcas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupMarcas.Location = New System.Drawing.Point(3, 251)
-        Me.GroupMarcas.Name = "GroupMarcas"
-        Me.GroupMarcas.Size = New System.Drawing.Size(276, 211)
-        Me.GroupMarcas.TabIndex = 3
-        Me.GroupMarcas.TabStop = False
-        Me.GroupMarcas.Text = "Valores de referencia"
-        '
-        'AdmonStart
-        '
-        Me.AdmonStart.AutoSize = True
-        Me.AdmonStart.BackColor = System.Drawing.Color.Blue
-        Me.AdmonStart.Dock = System.Windows.Forms.DockStyle.Top
-        Me.AdmonStart.ForeColor = System.Drawing.Color.White
-        Me.AdmonStart.Location = New System.Drawing.Point(3, 179)
-        Me.AdmonStart.Name = "AdmonStart"
-        Me.AdmonStart.Size = New System.Drawing.Size(270, 17)
-        Me.AdmonStart.TabIndex = 9
-        Me.AdmonStart.Text = "Mostrar inicio de cada administración"
-        Me.AdmonStart.UseVisualStyleBackColor = False
-        '
-        'CT0
-        '
-        Me.CT0.AutoSize = True
-        Me.CT0.BackColor = System.Drawing.Color.Blue
-        Me.CT0.Dock = System.Windows.Forms.DockStyle.Top
-        Me.CT0.ForeColor = System.Drawing.Color.White
-        Me.CT0.Location = New System.Drawing.Point(3, 162)
-        Me.CT0.Name = "CT0"
-        Me.CT0.Size = New System.Drawing.Size(270, 17)
-        Me.CT0.TabIndex = 8
-        Me.CT0.Text = "Mostrar concentración en el tiempo cero"
-        Me.CT0.UseVisualStyleBackColor = False
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Blue
-        Me.Panel2.Controls.Add(Me.MostrarVentanaTerapéutica)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.ForeColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(3, 140)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(270, 22)
-        Me.Panel2.TabIndex = 3
-        '
-        'MostrarVentanaTerapéutica
-        '
-        Me.MostrarVentanaTerapéutica.AutoSize = True
-        Me.MostrarVentanaTerapéutica.Dock = System.Windows.Forms.DockStyle.Top
-        Me.MostrarVentanaTerapéutica.Location = New System.Drawing.Point(0, 0)
-        Me.MostrarVentanaTerapéutica.Name = "MostrarVentanaTerapéutica"
-        Me.MostrarVentanaTerapéutica.Size = New System.Drawing.Size(270, 17)
-        Me.MostrarVentanaTerapéutica.TabIndex = 3
-        Me.MostrarVentanaTerapéutica.Text = "Mostrar ventana terapéutica completa"
-        Me.MostrarVentanaTerapéutica.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Blue
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(3, 121)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(270, 19)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Otras opciones"
-        '
-        'Panel17
-        '
-        Me.Panel17.BackColor = System.Drawing.Color.Blue
-        Me.Panel17.Controls.Add(Me.Marca2)
-        Me.Panel17.Controls.Add(Me.Marca2_visible)
-        Me.Panel17.Controls.Add(Me.Unidades2)
-        Me.Panel17.Controls.Add(Me.Marca2_Color)
-        Me.Panel17.Controls.Add(Me.Marca2_tamaño)
-        Me.Panel17.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel17.ForeColor = System.Drawing.Color.White
-        Me.Panel17.Location = New System.Drawing.Point(3, 99)
-        Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(270, 22)
-        Me.Panel17.TabIndex = 2
-        '
-        'Marca2
-        '
-        Me.Marca2.DecimalPlaces = 1
-        Me.Marca2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Marca2.Location = New System.Drawing.Point(61, 0)
-        Me.Marca2.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
-        Me.Marca2.Name = "Marca2"
-        Me.Marca2.Size = New System.Drawing.Size(48, 20)
-        Me.Marca2.TabIndex = 1
-        Me.Marca2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Marca2_visible
-        '
-        Me.Marca2_visible.AutoSize = True
-        Me.Marca2_visible.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Marca2_visible.Location = New System.Drawing.Point(0, 0)
-        Me.Marca2_visible.Name = "Marca2_visible"
-        Me.Marca2_visible.Size = New System.Drawing.Size(61, 22)
-        Me.Marca2_visible.TabIndex = 0
-        Me.Marca2_visible.Text = "Mostrar"
-        Me.Marca2_visible.UseVisualStyleBackColor = True
-        '
-        'Unidades2
-        '
-        Me.Unidades2.AutoSize = True
-        Me.Unidades2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Unidades2.Location = New System.Drawing.Point(109, 0)
-        Me.Unidades2.Name = "Unidades2"
-        Me.Unidades2.Size = New System.Drawing.Size(24, 13)
-        Me.Unidades2.TabIndex = 2
-        Me.Unidades2.Text = "g/L"
-        Me.Unidades2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Marca2_Color
-        '
-        Me.Marca2_Color.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca2_Color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Marca2_Color.FormattingEnabled = True
-        Me.Marca2_Color.Location = New System.Drawing.Point(133, 0)
-        Me.Marca2_Color.Name = "Marca2_Color"
-        Me.Marca2_Color.Size = New System.Drawing.Size(97, 21)
-        Me.Marca2_Color.TabIndex = 2
-        '
-        'Marca2_tamaño
-        '
-        Me.Marca2_tamaño.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca2_tamaño.Location = New System.Drawing.Point(230, 0)
-        Me.Marca2_tamaño.Name = "Marca2_tamaño"
-        Me.Marca2_tamaño.Size = New System.Drawing.Size(40, 20)
-        Me.Marca2_tamaño.TabIndex = 3
-        Me.Marca2_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.Marca2_tamaño.Visible = False
-        '
-        'Marca2_label
-        '
-        Me.Marca2_label.BackColor = System.Drawing.Color.Blue
-        Me.Marca2_label.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Marca2_label.ForeColor = System.Drawing.Color.White
-        Me.Marca2_label.Location = New System.Drawing.Point(3, 86)
-        Me.Marca2_label.Name = "Marca2_label"
-        Me.Marca2_label.Size = New System.Drawing.Size(270, 13)
-        Me.Marca2_label.TabIndex = 3
-        Me.Marca2_label.Text = "Concentración tóxica"
-        '
-        'Panel20
-        '
-        Me.Panel20.BackColor = System.Drawing.Color.Blue
-        Me.Panel20.Controls.Add(Me.Marca3)
-        Me.Panel20.Controls.Add(Me.Marca3_visible)
-        Me.Panel20.Controls.Add(Me.Unidades3)
-        Me.Panel20.Controls.Add(Me.Marca3_color)
-        Me.Panel20.Controls.Add(Me.Marca3_tamaño)
-        Me.Panel20.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel20.ForeColor = System.Drawing.Color.White
-        Me.Panel20.Location = New System.Drawing.Point(3, 64)
-        Me.Panel20.Name = "Panel20"
-        Me.Panel20.Size = New System.Drawing.Size(270, 22)
-        Me.Panel20.TabIndex = 1
-        '
-        'Marca3
-        '
-        Me.Marca3.DecimalPlaces = 1
-        Me.Marca3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Marca3.Location = New System.Drawing.Point(61, 0)
-        Me.Marca3.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
-        Me.Marca3.Name = "Marca3"
-        Me.Marca3.Size = New System.Drawing.Size(48, 20)
-        Me.Marca3.TabIndex = 1
-        Me.Marca3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Marca3_visible
-        '
-        Me.Marca3_visible.AutoSize = True
-        Me.Marca3_visible.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Marca3_visible.Location = New System.Drawing.Point(0, 0)
-        Me.Marca3_visible.Name = "Marca3_visible"
-        Me.Marca3_visible.Size = New System.Drawing.Size(61, 22)
-        Me.Marca3_visible.TabIndex = 0
-        Me.Marca3_visible.Text = "Mostrar"
-        Me.Marca3_visible.UseVisualStyleBackColor = True
-        '
-        'Unidades3
-        '
-        Me.Unidades3.AutoSize = True
-        Me.Unidades3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Unidades3.Location = New System.Drawing.Point(109, 0)
-        Me.Unidades3.Name = "Unidades3"
-        Me.Unidades3.Size = New System.Drawing.Size(24, 13)
-        Me.Unidades3.TabIndex = 2
-        Me.Unidades3.Text = "g/L"
-        Me.Unidades3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Marca3_color
-        '
-        Me.Marca3_color.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca3_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Marca3_color.FormattingEnabled = True
-        Me.Marca3_color.Location = New System.Drawing.Point(133, 0)
-        Me.Marca3_color.Name = "Marca3_color"
-        Me.Marca3_color.Size = New System.Drawing.Size(97, 21)
-        Me.Marca3_color.TabIndex = 2
-        '
-        'Marca3_tamaño
-        '
-        Me.Marca3_tamaño.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca3_tamaño.Location = New System.Drawing.Point(230, 0)
-        Me.Marca3_tamaño.Name = "Marca3_tamaño"
-        Me.Marca3_tamaño.Size = New System.Drawing.Size(40, 20)
-        Me.Marca3_tamaño.TabIndex = 3
-        Me.Marca3_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.Marca3_tamaño.Visible = False
-        '
-        'Marca3_label
-        '
-        Me.Marca3_label.BackColor = System.Drawing.Color.Blue
-        Me.Marca3_label.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Marca3_label.ForeColor = System.Drawing.Color.White
-        Me.Marca3_label.Location = New System.Drawing.Point(3, 51)
-        Me.Marca3_label.Name = "Marca3_label"
-        Me.Marca3_label.Size = New System.Drawing.Size(270, 13)
-        Me.Marca3_label.TabIndex = 5
-        Me.Marca3_label.Text = "Concentración máxima recomendada"
-        '
-        'Panel16
-        '
-        Me.Panel16.BackColor = System.Drawing.Color.Blue
-        Me.Panel16.Controls.Add(Me.Marca1)
-        Me.Panel16.Controls.Add(Me.Unidades1)
-        Me.Panel16.Controls.Add(Me.Marca1_color)
-        Me.Panel16.Controls.Add(Me.Marca1_tamaño)
-        Me.Panel16.Controls.Add(Me.Marca1_visible)
-        Me.Panel16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel16.ForeColor = System.Drawing.Color.White
-        Me.Panel16.Location = New System.Drawing.Point(3, 29)
-        Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(270, 22)
-        Me.Panel16.TabIndex = 0
-        '
-        'Marca1
-        '
-        Me.Marca1.DecimalPlaces = 1
-        Me.Marca1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Marca1.Location = New System.Drawing.Point(61, 0)
-        Me.Marca1.Maximum = New Decimal(New Integer() {-1, -1, -1, 0})
-        Me.Marca1.Name = "Marca1"
-        Me.Marca1.Size = New System.Drawing.Size(48, 20)
-        Me.Marca1.TabIndex = 1
-        Me.Marca1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Unidades1
-        '
-        Me.Unidades1.AutoSize = True
-        Me.Unidades1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Unidades1.Location = New System.Drawing.Point(109, 0)
-        Me.Unidades1.Name = "Unidades1"
-        Me.Unidades1.Size = New System.Drawing.Size(24, 13)
-        Me.Unidades1.TabIndex = 1
-        Me.Unidades1.Text = "g/L"
-        Me.Unidades1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Marca1_color
-        '
-        Me.Marca1_color.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca1_color.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Marca1_color.FormattingEnabled = True
-        Me.Marca1_color.Location = New System.Drawing.Point(133, 0)
-        Me.Marca1_color.Name = "Marca1_color"
-        Me.Marca1_color.Size = New System.Drawing.Size(97, 21)
-        Me.Marca1_color.TabIndex = 2
-        '
-        'Marca1_tamaño
-        '
-        Me.Marca1_tamaño.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Marca1_tamaño.Location = New System.Drawing.Point(230, 0)
-        Me.Marca1_tamaño.Name = "Marca1_tamaño"
-        Me.Marca1_tamaño.Size = New System.Drawing.Size(40, 20)
-        Me.Marca1_tamaño.TabIndex = 3
-        Me.Marca1_tamaño.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.Marca1_tamaño.Visible = False
-        '
-        'Marca1_visible
-        '
-        Me.Marca1_visible.AutoSize = True
-        Me.Marca1_visible.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Marca1_visible.Location = New System.Drawing.Point(0, 0)
-        Me.Marca1_visible.Name = "Marca1_visible"
-        Me.Marca1_visible.Size = New System.Drawing.Size(61, 22)
-        Me.Marca1_visible.TabIndex = 0
-        Me.Marca1_visible.Text = "Mostrar"
-        Me.Marca1_visible.UseVisualStyleBackColor = True
-        '
-        'Marca1_label
-        '
-        Me.Marca1_label.BackColor = System.Drawing.Color.Blue
-        Me.Marca1_label.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Marca1_label.ForeColor = System.Drawing.Color.White
-        Me.Marca1_label.Location = New System.Drawing.Point(3, 16)
-        Me.Marca1_label.Name = "Marca1_label"
-        Me.Marca1_label.Size = New System.Drawing.Size(270, 13)
-        Me.Marca1_label.TabIndex = 7
-        Me.Marca1_label.Text = "Concentración mínima eficaz"
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.Label65)
-        Me.TabPage4.Controls.Add(Me.PictureBox1)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(282, 562)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Acerca de"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'Label65
-        '
-        Me.Label65.Location = New System.Drawing.Point(47, 196)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(186, 179)
-        Me.Label65.TabIndex = 4
-        Me.Label65.Text = resources.GetString("Label65.Text")
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(98, 59)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 342)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(89, 99)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
         'Panel1
@@ -1617,9 +1585,9 @@ Partial Class MainForm
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(0, 623)
+        Me.Panel1.Location = New System.Drawing.Point(0, 639)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(290, 21)
+        Me.Panel1.Size = New System.Drawing.Size(323, 21)
         Me.Panel1.TabIndex = 2
         '
         'Pinned
@@ -1627,7 +1595,7 @@ Partial Class MainForm
         Me.Pinned.AutoSize = True
         Me.Pinned.Checked = True
         Me.Pinned.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Pinned.Location = New System.Drawing.Point(191, 0)
+        Me.Pinned.Location = New System.Drawing.Point(224, 0)
         Me.Pinned.Name = "Pinned"
         Me.Pinned.Size = New System.Drawing.Size(99, 21)
         Me.Pinned.TabIndex = 1
@@ -1640,9 +1608,9 @@ Partial Class MainForm
         Me.Panel22.Controls.Add(Me.Label1)
         Me.Panel22.Controls.Add(Me.Panel25)
         Me.Panel22.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel22.Location = New System.Drawing.Point(0, 588)
+        Me.Panel22.Location = New System.Drawing.Point(0, 604)
         Me.Panel22.Name = "Panel22"
-        Me.Panel22.Size = New System.Drawing.Size(290, 35)
+        Me.Panel22.Size = New System.Drawing.Size(323, 35)
         Me.Panel22.TabIndex = 1
         '
         'Panel25
@@ -1656,7 +1624,7 @@ Partial Class MainForm
         Me.Panel25.ForeColor = System.Drawing.Color.White
         Me.Panel25.Location = New System.Drawing.Point(0, 14)
         Me.Panel25.Name = "Panel25"
-        Me.Panel25.Size = New System.Drawing.Size(290, 21)
+        Me.Panel25.Size = New System.Drawing.Size(323, 21)
         Me.Panel25.TabIndex = 1
         '
         'TextBox_y
@@ -1665,7 +1633,7 @@ Partial Class MainForm
         Me.TextBox_y.Location = New System.Drawing.Point(201, 0)
         Me.TextBox_y.Name = "TextBox_y"
         Me.TextBox_y.ReadOnly = True
-        Me.TextBox_y.Size = New System.Drawing.Size(89, 20)
+        Me.TextBox_y.Size = New System.Drawing.Size(122, 20)
         Me.TextBox_y.TabIndex = 1
         '
         'TextBox_x
@@ -1696,6 +1664,7 @@ Partial Class MainForm
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.Controls.Add(Me.ToolStrip1)
+        Me.SplitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No
         '
         'SplitContainer1.Panel2
         '
@@ -1705,8 +1674,8 @@ Partial Class MainForm
         Me.SplitContainer1.Panel2.Controls.Add(Me.Panel1)
         Me.SplitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.SplitContainer1.Panel2MinSize = 290
-        Me.SplitContainer1.Size = New System.Drawing.Size(1176, 644)
-        Me.SplitContainer1.SplitterDistance = 882
+        Me.SplitContainer1.Size = New System.Drawing.Size(1176, 660)
+        Me.SplitContainer1.SplitterDistance = 849
         Me.SplitContainer1.TabIndex = 0
         '
         'ToolStrip1
@@ -1714,7 +1683,7 @@ Partial Class MainForm
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Instant, Me.ToolStripSeparator2, Me.Iniciar, Me.Detener, Me.ToolStripSeparator3, Me.Clear, Me.ToolStripSeparator1, Me.Save, Me.ToolStripSeparator4, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(882, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(849, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -1750,7 +1719,7 @@ Partial Class MainForm
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
         Me.StatusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 644)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 660)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.StatusStrip1.Size = New System.Drawing.Size(1176, 20)
@@ -1760,7 +1729,7 @@ Partial Class MainForm
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(640, 15)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(650, 15)
         Me.ToolStripStatusLabel1.Text = "PAPIME PROYECTO 26-PE204915 - DEPARTAMENTO DE FARMACOLOGÍA - FACULTAD DE MEDICINA" &
     " DE LA UNAM - 2015"
         '
@@ -1768,7 +1737,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1176, 664)
+        Me.ClientSize = New System.Drawing.Size(1176, 680)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1816,6 +1785,21 @@ Partial Class MainForm
         Me.GroupBox4.ResumeLayout(False)
         Me.MainTabControl.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
+        Me.GroupMarcas.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel17.ResumeLayout(False)
+        Me.Panel17.PerformLayout()
+        CType(Me.Marca2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Marca2_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel20.ResumeLayout(False)
+        Me.Panel20.PerformLayout()
+        CType(Me.Marca3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Marca3_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel16.ResumeLayout(False)
+        Me.Panel16.PerformLayout()
+        CType(Me.Marca1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Marca1_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.CD17.ResumeLayout(False)
@@ -1845,23 +1829,6 @@ Partial Class MainForm
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
-        Me.GroupMarcas.ResumeLayout(False)
-        Me.GroupMarcas.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel17.ResumeLayout(False)
-        Me.Panel17.PerformLayout()
-        CType(Me.Marca2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Marca2_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel20.ResumeLayout(False)
-        Me.Panel20.PerformLayout()
-        CType(Me.Marca3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Marca3_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel16.ResumeLayout(False)
-        Me.Panel16.PerformLayout()
-        CType(Me.Marca1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Marca1_tamaño, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -1885,6 +1852,8 @@ Partial Class MainForm
     Friend WithEvents MainTabControl As System.Windows.Forms.TabControl
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
+    Friend WithEvents Label65 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
     Friend WithEvents Panel11 As System.Windows.Forms.Panel
@@ -1988,7 +1957,6 @@ Partial Class MainForm
     Friend WithEvents Label5 As Windows.Forms.Label
     Friend WithEvents Label4 As Windows.Forms.Label
     Friend WithEvents GroupMarcas As Windows.Forms.GroupBox
-    Friend WithEvents CT0 As Windows.Forms.CheckBox
     Friend WithEvents Panel2 As Windows.Forms.Panel
     Friend WithEvents MostrarVentanaTerapéutica As Windows.Forms.CheckBox
     Friend WithEvents Label2 As Windows.Forms.Label
@@ -2013,8 +1981,4 @@ Partial Class MainForm
     Friend WithEvents Marca1_tamaño As Windows.Forms.NumericUpDown
     Friend WithEvents Marca1_visible As Windows.Forms.CheckBox
     Friend WithEvents Marca1_label As Windows.Forms.Label
-    Friend WithEvents TabPage4 As Windows.Forms.TabPage
-    Friend WithEvents Label65 As Windows.Forms.Label
-    Friend WithEvents PictureBox1 As Windows.Forms.PictureBox
-    Friend WithEvents AdmonStart As Windows.Forms.CheckBox
 End Class

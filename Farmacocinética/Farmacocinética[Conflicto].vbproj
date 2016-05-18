@@ -13,7 +13,7 @@
     <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Google Drive\Cinética\Farmacocinética Original\</PublishUrl>
+    <PublishUrl>D:\Google Drive\Cinética\Farmacocinética original\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,8 +27,8 @@
     <ProductName>FARMACOCINÉTICA</ProductName>
     <PublisherName>DR ARTURO JUÁREZ FLORES</PublisherName>
     <SuiteName>FARMALAB</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.5.0.%2a</ApplicationVersion>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.1.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -81,13 +81,10 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>icono_farma_fondo %281%29.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlActualizable">
@@ -138,7 +135,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="MFA.vb" />
-    <Compile Include="Prediseñados.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -211,7 +207,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="NTGRAPH.HLP" />
     <None Include="Resources\Clearallrequests_8816.png" />
   </ItemGroup>
   <ItemGroup>
@@ -231,10 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono_farma_fondo %281%29.ico" />
-    <Content Include="MIT License.txt" />
-    <Content Include="NTGraph.ocx" />
-    <None Include="Resources\icono farma fondo.png" />
-    <None Include="Resources\icono farma.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

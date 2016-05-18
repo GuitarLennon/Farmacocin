@@ -6,217 +6,31 @@ Imports Farmacocinética.ModeloFarmacocinéticoAnimado
 
 Public Class MainForm
 
-    <Serializable>
-   Public Class Info
-        'Public formas As FormaFarmacéutica()
-        Public farmas As Fármaco()
-        Sub New()
-
-        End Sub
-    End Class
-
-    Public Sub loadCustom()
-        'If Not IO.File.Exists(ruta) Then Exit Sub
-        'Try
-        '    Dim XmlRdr As New XmlTextReader(ruta)
-        '    Dim Ser As New Serialization.XmlSerializer(GetType(Info))
-
-        '    Dim i As Info
-
-        '    If Ser.CanDeserialize(XmlRdr) Then
-
-        '        i = Ser.Deserialize(XmlRdr)
-        '        customFarmacos = i.farmas
-        '        customFormasFarmacéuticas = i.formas
-
-        '    Else
-
-        '        'do nothing
-
-        '    End If
-        'Catch X As System.IO.FileNotFoundException
-
-        'Catch
-
-        'Finally
-
-        'End Try
-    End Sub
-
-    Public Sub saveCustom()
-
-        'Dim XmlWrt As XmlWriter
-        'Dim settings As New XmlWriterSettings() With {.Indent = True, .IndentChars = " ", _
-        '                                             .Encoding = System.Text.Encoding.Default}
-        'Dim tipo As Type = GetType(Info)
-        ''Dim extratypes As Type() = New Type() {GetType(FormaFarmacéutica)}
-
-        'Dim i As New Info With {.farmas = customFarmacos, .formas = customFormasFarmacéuticas}
-
-        'Try
-        '    XmlWrt = XmlWriter.Create(ruta, settings)
-        '    Dim Ser As New Serialization.XmlSerializer(tipo)
-
-        '    Ser.Serialize(XmlWrt, i)
-
-        'Catch ex As Exception
-
-        'End Try
-    End Sub
-
-    '<Serializable>
-    'Public Class FormaFarmacéutica
-    '    Public Const DensidadEtanol As Double = 0.789
-    '    Property Nombre As String
-    '    Dim _dosis As Double
-    '    ReadOnly Property Dosis As Double
-    '        Get
-    '            If _dosis = -1 Then Return mililitrosAGramos(Volumen)
-    '            Return _dosis
-    '        End Get
-    '    End Property
-    '    Property _default As Boolean
-
-    '    Property AlcVol As Double
-    '    Property Volumen As Double
-
-    '    Sub New()
-
-    '    End Sub
-
-    '    Sub New(nombre As String, _default As Boolean)
-    '        Me.Nombre = nombre
-    '        Me._default = _default
-    '    End Sub
-
-    '    Sub New(nombre As String, AlcVol As Double, volumen As Double, Optional dosis As Double = -1)
-
-    '        Me.Nombre = nombre
-    '        Me.Volumen = volumen
-    '        Me._dosis = dosis
-    '        Me.AlcVol = AlcVol
-    '    End Sub
-
-    '    Public Sub CopyFrom(other As FormaFarmacéutica)
-    '        Me.AlcVol = other.AlcVol
-    '        Me.Volumen = other.Volumen
-
-    '    End Sub
-
-    '    Public Overrides Function ToString() As String
-    '        If Not _default Then
-    '            Return String.Format("{0} {1}% {2}ml ({3} g)", Me.Nombre, Me.AlcVol, Me.Volumen, Me.Dosis)
-
-    '        End If
-    '        Return String.Format("{0}", Me.Nombre)
-    '    End Function
-
-    '    Public Function mililitrosAGramos(mililitros As Double) As Double
-    '        Return mililitrosAGramosDeAlcohol(mililitros * AlcVol / 100)
-    '    End Function
-
-    '    Public Shared Function mililitrosAGramosDeAlcohol(mililitros As Double) As Double
-    '        Return mililitros * DensidadEtanol
-    '    End Function
-
-    '    Public Function getVolume(gramos As Double) As Double
-    '        Return (gramos / DensidadEtanol) / (AlcVol / 100)
-    '    End Function
-    'End Class
-
-    <Serializable>
-    Public Class Fármaco
-        Property Name As String
-        Property BD As String
-        Property ConstanteAbsorción As Double
-        Property constanteEliminación As Double
-        Property TipoEliminación As ModeloFarmacocinéticoAnimado.GradosDeEliminación = GradosDeEliminación.Primer_Orden
-        Property vMax As Double
-        Public Overrides Function ToString() As String
-            Return Me.Name
-        End Function
-        Sub New()
-
-        End Sub
-    End Class
-
     Public ReadOnly Property Marcas()
         Get
             Dim l As New List(Of Marca)
-            l.Add(New Marca With {.name = Marca1_label.Text,
+            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca1_label.Text.ToLower()),
                                   .color = Drawing.Color.FromKnownColor(Marca1_color.SelectedItem),
                                   .show = Marca1_visible.Checked,
                                   .y = Marca1.Value,
-                                  .size = Marca1_tamaño.Value})
-            l.Add(New Marca With {.name = Marca2_label.Text,
+                                  .size = Marca1_tamaño.Value,
+                                  .style = NTGRAPHLib.LineType.Dot})
+            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca2_label.Text.ToLower()),
                                   .color = Drawing.Color.FromKnownColor(Marca2_Color.SelectedItem),
                                   .show = Marca2_visible.Checked,
                                   .y = Marca2.Value,
-                                  .size = Marca2_tamaño.Value})
-            l.Add(New Marca With {.name = Marca3_label.Text,
+                                  .size = Marca2_tamaño.Value,
+                                  .style = NTGRAPHLib.LineType.Dot})
+            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca3_label.Text.ToLower()),
                                   .color = Drawing.Color.FromKnownColor(Marca3_color.SelectedItem),
                                   .show = Marca3_visible.Checked,
                                   .y = Marca3.Value,
-                                  .size = Marca3_tamaño.Value})
-          
+                                  .size = Marca3_tamaño.Value,
+                                  .style = NTGRAPHLib.LineType.Dot})
+
             Return l.ToArray
         End Get
     End Property
-
-#Region "Constants"
-
-    'Public customFormasFarmacéuticas() As FormaFarmacéutica
-
-    'Private formasDefault As FormaFarmacéutica() = New FormaFarmacéutica() {
-    '    New FormaFarmacéutica("PERSONALIZADO", True) With {.AlcVol = 5, .Volumen = 100},
-    '    New FormaFarmacéutica("TEQUILA CAZADORES AÑEJO", 38, 45, 13.49),
-    '    New FormaFarmacéutica("TEQUILA HERRADURA", 40, 45, 14.2),
-    '    New FormaFarmacéutica("TEQUILA JIMADOR", 35, 45, 12.42),
-    '    New FormaFarmacéutica("RON BACARDÍ", 40, 45, 14.2),
-    '    New FormaFarmacéutica("BRANDY PRESIDENTE", 38, 45, 13.49),
-    '    New FormaFarmacéutica("VODKA ABSOLUT", 40, 45, 13.49),
-    '    New FormaFarmacéutica("WHISKEY J&B", 40, 45, 14.2),
-    '    New FormaFarmacéutica("CERVEZA VICTORIA", 4, 355, 11.2),
-    '    New FormaFarmacéutica("CERVEZA NOCHEBUENA", 5.9, 355, 16.52),
-    '    New FormaFarmacéutica("CERVEZA CLARA BOHEMIA PREMIUM", 5, 355, 14.0),
-    '    New FormaFarmacéutica("CERVEZA PACÍFICO", 4.5, 3.55, 12.6),
-    '    New FormaFarmacéutica("CERVEZA XX LAGER SPECIAL", 4.3, 355, 12.04),
-    '    New FormaFarmacéutica("CERVEZA CORONA EXTRA", 4.5, 355, 12.6),
-    '    New FormaFarmacéutica("CERVEZA NEGRA MODELO", 5.3, 355, 14.84),
-    '    New FormaFarmacéutica("CARIBE COOLER", 4.7, 300, 11.12),
-    '    New FormaFarmacéutica("VIÑA REAL", 6, 345, 16.33)
-    '    }
-
-    'ReadOnly Property FormasFarmaDef As FormaFarmacéutica()
-    '    Get
-    '        'Dim l As New List(Of FormaFarmacéutica)
-    '        'l.AddRange(formasDefault)
-    '        'If Not customFormasFarmacéuticas Is Nothing Then l.AddRange(customFormasFarmacéuticas)
-    '        'Return l.ToArray
-    '        Return Nothing
-    '    End Get
-
-    'End Property
-
-    Private customFarmacos As Fármaco()
-
-    Private farmacosDefault As Fármaco() = New Fármaco() {
-        New Fármaco With {.Name = "Etanol", .BD = 100,
-                          .ConstanteAbsorción = 2.77,
-                          .constanteEliminación = 0.0821,
-                          .TipoEliminación = GradosDeEliminación.Michaelis_Menten,
-                          .vMax = 0.232}}
-
-    ReadOnly Property Fármacos As Fármaco()
-        Get
-            Dim l As New List(Of Fármaco)
-            l.AddRange(farmacosDefault)
-            If customFarmacos IsNot Nothing Then l.AddRange(customFarmacos)
-            Return l.ToArray
-        End Get
-    End Property
-
-#End Region
 
 #Region "Properties"
 
@@ -266,7 +80,7 @@ Public Class MainForm
 
     ReadOnly Property Dosis As Double
         Get
-            Return Dosis1.Value '* 10 ^ Dosis_exp_2.Value
+            Return Dosis1.Value * 10 ^ -3
         End Get
     End Property
 
@@ -380,19 +194,13 @@ Public Class MainForm
         End Get
     End Property
 
-    ReadOnly Property ColorPunto As Drawing.Color
+    ReadOnly Property ColorEje As Drawing.Color
         Get
             Try
-                Return Drawing.Color.FromKnownColor(DotColor.SelectedItem)
+                Return Drawing.Color.FromKnownColor(AxisColor.SelectedItem)
             Catch ex As Exception
                 Stop
             End Try
-        End Get
-    End Property
-
-    ReadOnly Property TipoPunto As NTGRAPHLib.SymbolType
-        Get
-            Return DotType.SelectedItem
         End Get
     End Property
 
@@ -464,15 +272,15 @@ Public Class MainForm
 #Region "   Internal"
     ReadOnly Property PrincipalElement As Element
         Get
-            Dim returning As Element = New Element With {.lineColor = ColorPrincipal, .id = NTGraph1.ElementCount + 1, .pointColor = ColorPunto, _
-                                     .pointSymbol = TipoPunto, .lineType = LineaPrincipal, .width = TamañoLinea}
+            Dim returning As Element = New Element With {.lineColor = ColorPrincipal, .pointColor = ColorPrincipal,
+                                     .pointSymbol = SymbolType.Nosym, .lineType = LineaPrincipal, .width = TamañoLinea}
             Return returning
         End Get
     End Property
 
     ReadOnly Property SecondaryElement As Element
         Get
-            Dim returning As Element = New Element With {.lineColor = ColorDiferencial, .id = NTGraph1.ElementCount, _
+            Dim returning As Element = New Element With {.lineColor = ColorDiferencial,
                     .lineType = TipoDiferencial, .width = TamañoDiferencial, .show = UsarDiferencial.Checked}
             Return returning
         End Get
@@ -480,14 +288,14 @@ Public Class MainForm
 
     ReadOnly Property extrapolado As Element
         Get
-            Return New Element With {.lineColor = Drawing.Color.DarkBlue, .id = NTGraph1.ElementCount, _
+            Return New Element With {.lineColor = Drawing.Color.DarkBlue, .id = NTGraph1.ElementCount,
                                .lineType = LineaPrincipal, .width = TamañoLinea}
         End Get
     End Property
 
     ReadOnly Property eliminado As Element
         Get
-            Return New Element With {.lineColor = Drawing.Color.Cyan, .id = NTGraph1.ElementCount, _
+            Return New Element With {.lineColor = Drawing.Color.Cyan, .id = NTGraph1.ElementCount,
                                            .lineType = LineaPrincipal, .width = TamañoLinea}
         End Get
     End Property
@@ -530,68 +338,68 @@ Public Class MainForm
         Me.NTGraph1.Size = New System.Drawing.Size(532, 701)
         Me.NTGraph1.TabIndex = 2
 
+
+
         CType(Me.NTGraph1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.Controls.Add(Me.NTGraph1)
         NTGraph1.BringToFront()
         Me.SplitContainer1.SplitterDistance += 1
 
+
+
     End Sub
 
     Private Sub initializeDrawing()
         VidaMediaEliminación(Nothing, Nothing)
-        LineColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        LineColor.SelectedItem = System.Drawing.KnownColor.Red
-        DotColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        DotColor.SelectedItem = System.Drawing.KnownColor.Green
+
+        'LineColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'LineColor.SelectedItem = System.Drawing.KnownColor.Red
+        'DotColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'DotColor.SelectedItem = System.Drawing.KnownColor.Green
         LineType.DataSource = [Enum].GetValues(GetType(NTGRAPHLib.LineType))
         LineType.SelectedItem = NTGRAPHLib.LineType.Solid
-        DotType.DataSource = [Enum].GetValues(GetType(NTGRAPHLib.SymbolType))
-        DotType.SelectedItem = NTGRAPHLib.SymbolType.Nosym
-        MaxColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        MaxColor.SelectedItem = System.Drawing.KnownColor.YellowGreen
-        DifColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        DifColor.SelectedItem = System.Drawing.KnownColor.Blue
+        'DotType.DataSource = [Enum].GetValues(GetType(NTGRAPHLib.SymbolType))
+        'DotType.SelectedItem = NTGRAPHLib.SymbolType.Nosym
+        'MaxColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'MaxColor.SelectedItem = System.Drawing.KnownColor.YellowGreen
+        'DifColor.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'DifColor.SelectedItem = System.Drawing.KnownColor.Blue
         DiffType.DataSource = [Enum].GetValues(GetType(NTGRAPHLib.LineType))
         DiffType.SelectedItem = NTGRAPHLib.LineType.DashDotDot
 
-        Marca1_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        Marca2_Color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        Marca3_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        'Marca4_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
-        Fondo.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        SetColorComboBox(LineColor, KnownColor.Red)
+        SetColorComboBox(AxisColor, KnownColor.Black)
+        SetColorComboBox(MaxColor, KnownColor.Black)
+        SetColorComboBox(DifColor, KnownColor.Cyan)
 
-        Marca1_color.SelectedItem = System.Drawing.KnownColor.Green
-        Marca2_Color.SelectedItem = System.Drawing.KnownColor.Green
-        Marca3_color.SelectedItem = System.Drawing.KnownColor.OrangeRed
+        SetColorComboBox(Marca1_color, KnownColor.Black)
+        SetColorComboBox(Marca2_Color, KnownColor.Black)
+        SetColorComboBox(Marca3_color, KnownColor.Black)
+        SetColorComboBox(Fondo, KnownColor.White)
+
+        'Marca1_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'Marca2_Color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'Marca3_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'Marca4_color.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+        'Fondo.DataSource = [Enum].GetValues(GetType(System.Drawing.KnownColor))
+
+
+
+        'Marca1_color.SelectedItem = System.Drawing.KnownColor.Yellow
+        'Marca2_Color.SelectedItem = System.Drawing.KnownColor.Yellow
+        'Marca3_color.SelectedItem = System.Drawing.KnownColor.Yellow
         'Marca4_color.SelectedItem = System.Drawing.KnownColor.Red
-        Fondo.SelectedItem = System.Drawing.KnownColor.Black
+        'Fondo.SelectedItem = System.Drawing.KnownColor.Blue
 
         'FarmacoPredeterminado.DataSource = Me.Fármacos
 
         Unidades.DataSource = [Enum].GetValues(GetType(ModeloFarmacocinéticoAnimado.Units))
-        Unidades.SelectedItem = ModeloFarmacocinéticoAnimado.Units.gramos_por_litro
+        Unidades.SelectedItem = ModeloFarmacocinéticoAnimado.Units.microgramos_por_mililitro
     End Sub
 
     Private Sub initialize_laboratory()
         TipoEliminación.DataSource = [Enum].GetValues(GetType(GradosDeEliminación))
         TipoEliminación.SelectedItem = GradosDeEliminación.Primer_Orden
-
-        loadCustom()
-
-        'FarmacoPredeterminado.DataSource = Me.Fármacos
-
-        'FP_2.DataSource = Me.FormasFarmaDef
-        'FP_3.DataSource = Me.FormasFarmaDef
-        'FP_4.DataSource = Me.FormasFarmaDef
-
-        'For Each f As FormaFarmacéutica In Me.FormasFarmaDef
-        '    FP_2.Items.Add(f)
-        '    FP_3.Items.Add(f)
-        '    FP_4.Items.Add(f)
-        'Next
-        'FP_2.SelectedIndex = 0
-        'FP_3.SelectedIndex = 0
-        'FP_4.SelectedIndex = 0
 
     End Sub
 
@@ -599,43 +407,51 @@ Public Class MainForm
 
         initializeDrawing()
         initialize_laboratory()
+        formas_load()
 
-        For i As Integer = 1 To 16
-            Me.Controls.Find("ControlDemostración" & i, True).ToList.ForEach(Sub(control As Control)
-                                                                                 Dim c As ControlActualizable.ControlDemostración = TryCast(control, ControlActualizable.ControlDemostración)
-                                                                                 If c IsNot Nothing Then c.LabelIsVisible = True
-                                                                             End Sub)
-        Next
-        'For Each Control As Control In Me.Controls
-        '    Dim c As ControlActualizable.ControlDemostración = TryCast(Control, ControlActualizable.ControlDemostración)
-        '    If c IsNot Nothing Then c.LabelIsVisible = True
+        NTGraph1.FrameStyle = NTGRAPHLib.FrameStyle.Scope
 
-        'Next
+        MúltiplesDosis_CheckedBoxesEventHandler(sender, e)
+
+        CD01.LabelIsVisible = True
+        CD02.LabelIsVisible = True
+        CD03.LabelIsVisible = True
+        CD04.LabelIsVisible = True
+        CD05.LabelIsVisible = True
+        CD06.LabelIsVisible = True
+        CD07.LabelIsVisible = True
+        CD08.LabelIsVisible = True
+        CD09.LabelIsVisible = True
+        CD10.LabelIsVisible = True
+        CD11.LabelIsVisible = True
+        CD12.LabelIsVisible = True
+        CD13.LabelIsVisible = True
+        CD14.LabelIsVisible = True
+        CD15.LabelIsVisible = True
+        CD16.LabelIsVisible = True
+        CD17.LabelIsVisible = True
+
+        CD01.TabStop = False
+        CD02.TabStop = False
+        CD03.TabStop = False
+        CD04.TabStop = False
+        CD05.TabStop = False
+        CD06.TabStop = False
+        CD07.TabStop = False
+        CD08.TabStop = False
+        CD09.TabStop = False
+        CD10.TabStop = False
+        CD11.TabStop = False
+        CD12.TabStop = False
+        CD13.TabStop = False
+        CD14.TabStop = False
+        CD15.TabStop = False
+        CD16.TabStop = False
+        CD17.TabStop = False
+
     End Sub
 
-    Private Sub formaFarmacéuticaManaging(sender As Object, e As EventArgs)
-        'Dim send As ComboBox = DirectCast(sender, ComboBox)
-
-        '' If send IsNot FP_0 Then FP_0.SelectedItem = send.SelectedItem
-        ''If send IsNot FP_1 Then FP_1.SelectedItem = send.SelectedItem
-        'If send IsNot FP_2 Then FP_2.SelectedItem = send.SelectedItem
-        'If send IsNot FP_3 Then FP_3.SelectedItem = send.SelectedItem
-        'If send IsNot FP_4 Then FP_4.SelectedItem = send.SelectedItem
-
-        'Dim ff As FormaFarmacéutica = TryCast(send.SelectedItem, FormaFarmacéutica)
-
-        'Dim ff_default As FormaFarmacéutica = TryCast(FP_2.Items(0), FormaFarmacéutica)
-        'ff_default.CopyFrom(ff)
-
-        'If ff IsNot Nothing Then
-        '    Me.Dosis_Num_2.Value = ff.Dosis
-        '    Me.Dosis_exp_2.Value = 0
-        '    Me.Volumen.Value = ff.Volumen
-        '    Me.AlcVol.Value = ff.AlcVol
-        'End If
-
-    End Sub
-
+#Region "OLD"
     Private Sub DrawGraphicInfo()
         NTGraph1.XLabel = "Tiempo (horas)."
         NTGraph1.Caption = "Fármaco personalizado."
@@ -645,19 +461,28 @@ Public Class MainForm
     End Sub
 
     Private Sub CreateNewElement()
-        element = New Element With {.lineColor = ColorPrincipal, .id = NTGraph1.ElementCount, .pointColor = ColorPunto, _
-                                    .pointSymbol = TipoPunto, .lineType = LineaPrincipal, .width = TamañoLinea, .name = "Gráfico " & .id}
+        element = New Element With {.lineColor = ColorPrincipal, .id = NTGraph1.ElementCount, .pointColor = ColorPrincipal,
+                                    .pointSymbol = SymbolType.Nosym, .lineType = LineaPrincipal, .width = TamañoLinea, .name = "Gráfico " & .id}
 
         element.ToGraph(NTGraph1)
     End Sub
 
     Private Sub Crear_Modelo_Farmacocinético()
+        RemoveHandler Me.ModeloFarmacocinéticoAnimado.StopEvent, AddressOf Me.StopEvent
+        RemoveHandler Me.ModeloFarmacocinéticoAnimado.StartEvent, AddressOf Me.StartEvent
+
+        Dim style As Byte = 0
+        If Libre.Checked Then style = 1
+        If Pinned.Checked Then style = 2
+
         Me.ModeloFarmacocinéticoAnimado = New ModeloFarmacocinéticoAnimado(Me.NTGraph1) With
-                                         {.BackgroundColor = Me.ColorFondo,
+                                         {.AcotacionesColor = Me.AcotacionesColor,
+                                         .BackgroundColor = Me.ColorFondo,
                                           .Biodisponibilidad = Me.FracciónBiodisponible,
                                           .ConstanteAbsorción = Me.Ka,
                                           .ConstanteEliminación = Me.Ke,
                                           .CurrentX = 0,
+                                          .CursorStyle = style,
                                           .DisplayOnSemilogarithm = Log.Checked,
                                           .Dosificación = Me.TipoDeDosificación,
                                           .Dosis = Me.Dosis,
@@ -665,27 +490,38 @@ Public Class MainForm
                                           .DosisTotales = Me.DosisTotales,
                                           .EndingX = Me.Horas_de_estudio,
                                           .IntervaloEntreDosis = Me.IntérvaloDeDosificación,
-                                          .GraphicName = "Farmacocinética",
+                                          .GraphicName = "Tiempo vs. concentración de " + TryCast(Medicamento.SelectedItem, Fármaco).Nombre,
                                           .Marcas = Me.Marcas,
                                           .MostrarAcotaciones = Me.MostrarAcotaciones,
+                                          .PrincipalAxisColor = ColorEje,
                                           .PrincipalElement = PrincipalElement,
                                           .SecundaryElement = SecondaryElement,
                                           .SoloEliminacíón = Me.SóloEliminación,
-                                          .StartingX = 0,
+                                          .StartingX = -2,
+                                          .StepX = 1 / 60,
+                                          .OverrideRange = Me.MostrarVentanaTerapéutica.Checked,
+                                          .ConcentrationLimit = Marca2.Value,
                                           .TipoEliminación = Me.TipoDeEliminación,
+                                          .tLag = Me.t_lag.Value / 60,
                                           .UsarCarga = Me.UsarDosisCarga,
                                           .unit = Unidad,
-                                          .UnitsAbscises = "Horas",
-                                          .UnitsOrdered = "Concentración plasmática ~ ",
+                                          .UnitsAbscises = "TIEMPO (horas)",
+                                          .UnitsOrdered = "CONCENTRACIÓN PLASMÁTICA ~ ",
                                           .VelocidadDelTrazo = Me.VelocidadDeTrazo,
+                                          .View_CT0 = Me.CT0.Checked,
+                                          .View_AdministrationStart = Me.AdmonStart.Checked,
                                           .VMax = Me.VelocidadMáximaDeEliminación,
                                           .VolumenDistribución = VolumenDeDistribución
                                          }
+
+        AddHandler Me.ModeloFarmacocinéticoAnimado.StopEvent, AddressOf Me.StopEvent
+        AddHandler Me.ModeloFarmacocinéticoAnimado.StartEvent, AddressOf Me.StartEvent
     End Sub
 
     Private Sub Iniciar_Click(sender As Object, e As EventArgs) Handles Iniciar.Click
         Crear_Modelo_Farmacocinético()
         Me.ModeloFarmacocinéticoAnimado.Start()
+
     End Sub
 
     Private Sub Detener_Click(sender As Object, e As EventArgs) Handles Detener.Click
@@ -701,169 +537,21 @@ Public Class MainForm
         Me.ModeloFarmacocinéticoAnimado.Clear()
     End Sub
 
-    ''' <summary>
-    ''' Cambios en el valor coordinados
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub Dosis_Num_ValueChanged(sender As Object, e As EventArgs) Handles _
-        Dosis1.ValueChanged
-
-
-        'Try
-
-
-        '    Dim t As NumericUpDown = DirectCast(sender, NumericUpDown)
-
-        '    RemoveHandler Dosis_Num_2.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    RemoveHandler Dosis_Num_3.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    RemoveHandler Dosis_Num_1.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    RemoveHandler AlcVol.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    RemoveHandler Volumen.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    RemoveHandler Copas.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-
-        '    Dim ff As FormaFarmacéutica = TryCast(FP_4.SelectedItem, FormaFarmacéutica)
-        '    Dim dosis As Double
-        '    'If Not ff._default Then
-        '    '    dosis = ff.Volumen * (AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value
-        '    'Else
-        '    dosis = Volumen.Value * (AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value
-        '    'End If
-
-
-        '    If t Is AlcVol Then
-
-        '        If ff Is Nothing Then
-        '            'ff.AlcVol = t.Value
-        '        Else
-        '            If ff.AlcVol <> t.Value AndAlso FP_4.Items.Count > 0 Then
-        '                FP_4.SelectedIndex = 0
-        '                ff = TryCast(FP_4.SelectedItem, FormaFarmacéutica)
-        '                ff.AlcVol = t.Value
-        '            End If
-        '        End If
-
-
-        '        Dosis_Num_2.Value = dosis
-        '        Dosis_Num_3.Value = dosis
-        '        Dosis_Num_1.Value = dosis
-        '        'AlcVol.Value = 
-        '        'Volumen.Value = 
-
-        '        'Copas.Value =
-        '        If Not ff Is Nothing Then
-        '            Copas.Value = dosis / ff.Dosis
-        '        End If
-
-        '    ElseIf t Is Volumen Then
-
-        '        Dosis_Num_2.Value = dosis
-        '        Dosis_Num_3.Value = dosis
-        '        Dosis_Num_1.Value = dosis
-        '        'AlcVol.Value = 
-        '        'Volumen.Value = 
-        '        'Copas.Value =
-        '        If Not ff Is Nothing Then
-        '            Copas.Value = dosis / ff.Dosis
-        '        End If
-
-        '    ElseIf t Is Copas Then
-
-        '        Dosis_Num_2.Value = dosis
-        '        Dosis_Num_3.Value = dosis
-        '        Dosis_Num_1.Value = dosis
-        '        'AlcVol.Value = 
-        '        'Volumen.Value = 
-        '        If Not AlcVol.Value = 0 Then
-        '            Volumen.Value = dosis / ((AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value)
-        '        Else
-        '            Volumen.Value = 0
-        '        End If
-        '        'Copas.Value =
-
-        '    ElseIf t Is Dosis_Num_1 Then
-
-        '        Dosis_Num_2.Value = t.Value
-        '        Dosis_Num_3.Value = t.Value
-        '        'Dosis_Num_1.Value = 
-        '        'AlcVol.Value = 
-
-        '        'Volumen.Value = 
-        '        If Not AlcVol.Value = 0 Then
-        '            Volumen.Value = Dosis_Num_1.Value / ((AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value)
-        '        Else
-        '            Volumen.Value = 0
-        '        End If
-
-        '        'Copas.Value =
-        '        If Not ff Is Nothing Then
-        '            Copas.Value = Dosis_Num_1.Value / ff.Dosis
-        '        End If
-
-        '    ElseIf t Is Dosis_Num_2 Then
-
-        '        Dosis_Num_1.Value = t.Value
-        '        Dosis_Num_3.Value = t.Value
-        '        'Dosis_Num_1.Value = 
-        '        'AlcVol.Value = 
-
-        '        'Volumen.Value = 
-        '        If Not AlcVol.Value = 0 Then
-        '            Volumen.Value = Dosis_Num_1.Value / ((AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value)
-        '        Else
-        '            Volumen.Value = 0
-        '        End If
-
-        '        'Copas.Value =
-        '        If Not ff Is Nothing Then
-        '            Copas.Value = Dosis_Num_1.Value / ff.Dosis
-        '        End If
-
-        '    ElseIf t Is Dosis_Num_3 Then
-
-        '        Dosis_Num_1.Value = t.Value
-        '        Dosis_Num_2.Value = t.Value
-        '        'Dosis_Num_1.Value = 
-        '        'AlcVol.Value = 
-
-        '        'Volumen.Value = 
-        '        If Not AlcVol.Value = 0 Then
-        '            Volumen.Value = Dosis_Num_1.Value / ((AlcVol.Value / 100) * FormaFarmacéutica.DensidadEtanol * Copas.Value)
-        '        Else
-        '            Volumen.Value = 0
-        '        End If
-
-        '        'Copas.Value =
-        '        If Not ff Is Nothing Then
-        '            Copas.Value = Dosis_Num_1.Value / ff.Dosis
-        '        End If
-
-        '    End If
-
-        'Catch ex As Exception
-
-        'Finally
-        '    AddHandler Dosis_Num_2.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    AddHandler Dosis_Num_3.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    AddHandler Dosis_Num_1.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    AddHandler AlcVol.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    AddHandler Volumen.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        '    AddHandler Copas.ValueChanged, AddressOf Me.Dosis_Num_ValueChanged
-        'End Try
+    Private Sub StartEvent(sender As Object, e As EventArgs)
+        Me.Clear.Enabled = False
+        Me.Instant.Enabled = False
+        Me.Iniciar.Enabled = False
+        Me.Detener.Enabled = True
+        Me.Panel1.Enabled = False
     End Sub
 
-    ''' <summary>
-    ''' Cambios en el valor coordinados
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub Dosis_exp_ValueChanged(sender As Object, e As EventArgs)
-        'Dim t As NumericUpDown = DirectCast(sender, NumericUpDown)
-        'If t IsNot Dosis_Exp_1 Then Dosis_Exp_1.Value = t.Value
-        'If t IsNot Dosis_exp_2 Then Dosis_exp_2.Value = t.Value
-        'If t IsNot Dosis_exp_3 Then Dosis_exp_3.Value = t.Value
+    Private Sub StopEvent(sender As Object, e As EventArgs)
+        Me.Clear.Enabled = True
+        Me.Instant.Enabled = True
+        Me.Iniciar.Enabled = True
+        Me.Detener.Enabled = False
+        Me.Panel1.Enabled = True
+
     End Sub
 
     ''' <summary>
@@ -873,21 +561,20 @@ Public Class MainForm
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub NTGraph1_CursorPosition(sender As Object, e As AxNTGRAPHLib._DNTGraphEvents_CursorPositionEvent) Handles NTGraph1.CursorPosition
-        TextBox_x.Text = Format(e.x, "0.# h")
-        TextBox_y.Text = Format(e.y, "0.## ") & getUnitString(Me.Unidad)
+        Dim d As New Date
+        If e.x < 0 Then
+            e.x = 0
+        End If
 
-        'Dim factorConversión As Double
+        d = d.AddHours(e.x)
 
-        'Select Case Me.Unidad
-        '    Case Units.g_por_decilitro
-        '        factorConversión = 100
-        '    Case Units.gramos_por_litro
-        '        factorConversión = 1000
-        '    Case Units.mg_por_100ml
-        '        factorConversión = 10
-        'End Select
+        If e.x < 24 Then
+            TextBox_x.Text = String.Format("{0} h {1} min", d.Hour, d.Minute)
+        Else
+            TextBox_x.Text = String.Format("{0} d {1} h {2} min", d.Day, d.Hour, d.Minute)
+        End If
+        TextBox_y.Text = Format(e.y, "0.### ") & getUnitString(Me.Unidad)
 
-        'TextBox_CAe.Text = String.Format(" {0} mg/L", Format(e.y * factorConversión / 2000, "0.###"))
     End Sub
 
     ''' <summary>
@@ -896,7 +583,7 @@ Public Class MainForm
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub VidaMediaEliminación(sender As Object, e As EventArgs) Handles Dosis1.ValueChanged, Eliminación.ValueChanged, Absorción.ValueChanged
+    Private Sub VidaMediaEliminación(sender As Object, e As EventArgs) Handles Dosis1.ValueChanged, Absorción.ValueChanged, Eliminación.ValueChanged
         Try
             Dim i As Double = VidaMediadeEliminación(Me.Ke, (Me.FracciónBiodisponible * Dosis) / Me.VolumenDeDistribución, Me.TipoDeEliminación, Me.VelocidadMáximaDeEliminación / 10)
             Dim j As Double = VidaMediaSegundoOrden(Ka)
@@ -932,86 +619,6 @@ Public Class MainForm
         ModeloFarmacocinéticoAnimado.AdministrarDosis()
     End Sub
 
-    Private Sub Guardar_Farmacos_Click(sender As Object, e As EventArgs)
-        'Dim s As String = InputBox("Introduzca un nombre para este fármaco", "Nuevo Fármaco", "Nuevo fármaco")
-        'Dim f As New Fármaco With {.Name = s}
-        'f.BD = Me.FracciónBiodisponible * 100
-        'f.ConstanteAbsorción = Me.Ka
-        'f.constanteEliminación = Me.Ke
-        'f.TipoEliminación = Me.TipoDeEliminación
-        'f.vMax = Me.VelocidadMáximaDeEliminación
-        'Dim l As New List(Of Fármaco)
-        'If Not customFarmacos Is Nothing Then l.AddRange(customFarmacos)
-        'l.Add(f)
-
-        'customFarmacos = l.ToArray
-
-        'FarmacoPredeterminado.DataSource = Me.Fármacos
-        'FarmacoPredeterminado.SelectedItem = f
-
-        'saveCustom()
-
-    End Sub
-
-    Private Sub FarmacoPredeterminado_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-
-        'Dim F As Fármaco = DirectCast(DirectCast(sender, ComboBox).SelectedItem, Fármaco)
-
-        'Me.BD.Value = F.BD
-        'Me.Absorción_num.Value = F.ConstanteAbsorción
-        'Me.Abosrción_exp.Value = 0
-        'Me.Eliminación_num.Value = F.constanteEliminación
-        'Me.Eliminación_exp.Value = 0
-        'Me.TipoEliminación.SelectedItem = F.TipoEliminación
-        'Me.VelocidadMáximaEliminación.Value = F.vMax
-
-    End Sub
-
-    Private Sub G_FF_Click(sender As Object, e As EventArgs)
-        'Dim s As String = InputBox("Introduzca un nombre para la nueva presentación comercial", "Nueva Presentación comercial", "Nueva Presentación comercial")
-        'Dim f As New FormaFarmacéutica
-        'f.Nombre = s
-        'f.AlcVol = Me.AlcVol.Value
-        'f.Volumen = Me.Volumen.Value
-        'f._default = False
-
-        'Dim L As New List(Of FormaFarmacéutica)
-        'If customFormasFarmacéuticas IsNot Nothing Then L.AddRange(Me.customFormasFarmacéuticas)
-        'L.Add(f)
-        'customFormasFarmacéuticas = L.ToArray
-
-        'FP_2.DataSource = Me.FormasFarmaDef
-        'FP_3.DataSource = Me.FormasFarmaDef
-        'FP_4.DataSource = Me.FormasFarmaDef
-
-        'FP_2.SelectedItem = f
-
-        'saveCustom()
-
-    End Sub
-
-    'Private Sub Eliminación_ValueChanged(sender As Object, e As EventArgs) Handles Eliminación.ValueChanged
-
-    '    Dim t As NumericUpDown = TryCast(sender, NumericUpDown)
-    '    Dim x As Double = 0
-
-    '    If Me.ModeloFarmacocinéticoAnimado IsNot Nothing Then x = Me.ModeloFarmacocinéticoAnimado.CoeficienteQ
-    '    If Not t Is Nothing Then VME.Text = VidaMediadeEliminación(t.Value, x, Me.TipoDeEliminación, Me.VelocidadMáximaDeEliminación)
-
-    'End Sub
-
-    'Private Sub Absorción_ValueChanged(sender As Object, e As EventArgs) Handles Absorción.ValueChanged
-
-    '    Dim t As NumericUpDown = TryCast(sender, NumericUpDown)
-    '    Dim x As Double = 0
-
-    '    If Me.ModeloFarmacocinéticoAnimado IsNot Nothing Then x = Me.ModeloFarmacocinéticoAnimado.CoeficienteQ
-
-    '    If Not t Is Nothing Then VMA.Text = VidaMediadeEliminación(t.Value, Nothing, GradosDeEliminación.Primer_Orden, Nothing)
-
-    'End Sub
-      
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
         Dim c As New Windows.Forms.SaveFileDialog With {.AddExtension = True,
                                                                .CheckFileExists = False,
@@ -1032,4 +639,111 @@ Public Class MainForm
         Unidades2.Text = s
         Unidades3.Text = s
     End Sub
+
+    Private Sub Libre_CheckedChanged(sender As Object, e As EventArgs) Handles Libre.CheckedChanged
+        If Not Me.NTGraph1 Is Nothing Then
+            If ModeloFarmacocinéticoAnimado.Status = Stats.READY Then Me.NTGraph1.CursorMode = 1
+        End If
+    End Sub
+
+    Private Sub Pinned_CheckedChanged(sender As Object, e As EventArgs) Handles Pinned.CheckedChanged
+        If Not Me.NTGraph1 Is Nothing Then
+            If ModeloFarmacocinéticoAnimado.Status = Stats.READY Then Me.NTGraph1.CursorMode = 2
+        End If
+    End Sub
+
+    Private Sub MúltiplesDosis_CheckedBoxesEventHandler(sender As Object, e As EventArgs) Handles MúltiplesDosis.CheckedChanged, ChargeDoseActive.CheckedChanged
+        CD05.Enabled = MúltiplesDosis.Checked
+        CD06.Enabled = MúltiplesDosis.Checked
+        CD07.Enabled = MúltiplesDosis.Checked
+        ChargeDoseActive.Enabled = MúltiplesDosis.Checked
+        CD08.Enabled = MúltiplesDosis.Checked And ChargeDoseActive.Checked
+    End Sub
+
+    Private Sub SetColorComboBox(Combobox As ComboBox, color As KnownColor)
+        Dim listaDeColoresDelSistma As New List(Of String)
+        Dim listaDeColores As New List(Of KnownColor)
+
+        Dim props() As System.Reflection.PropertyInfo = GetType(SystemColors).GetProperties
+        For Each p As System.Reflection.PropertyInfo In props
+            listaDeColoresDelSistma.Add(p.Name)
+        Next
+
+        For Each col As Object In [Enum].GetValues(GetType(KnownColor))
+            If Not listaDeColoresDelSistma.Contains(col.ToString) Then listaDeColores.Add(col)
+        Next
+
+        Combobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+
+        AddHandler Combobox.DrawItem, Sub(_s As Object, _e As DrawItemEventArgs)
+                                          _e.DrawBackground()
+
+                                          Dim c As Color = Drawing.Color.FromKnownColor(listaDeColores(_e.Index))
+
+                                          Dim b As New SolidBrush(c)
+
+                                          Dim tb As Brush = Brushes.Black
+
+                                          _e.Graphics.FillRectangle(b, _e.Bounds.X + CInt(_e.Bounds.Width * 0.5), _e.Bounds.Y + CInt(_e.Bounds.Height * 0.1), CInt(_e.Bounds.Width * 0.8), CInt(_e.Bounds.Height * 0.8))
+
+                                          _e.Graphics.DrawString(listaDeColores(_e.Index).ToString, Combobox.Font, tb, _e.Bounds)
+
+                                          b.Dispose()
+                                          _e.DrawFocusRectangle()
+                                      End Sub
+
+        Combobox.DataSource = listaDeColores.ToArray
+
+        Combobox.SelectedItem = color
+    End Sub
+
+    Private Sub Label65_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        MsgBox(Label65.Text, vbOKOnly + MsgBoxStyle.Information)
+
+    End Sub
+#End Region
+
+#Region "Formas farmacéuticas"
+    Sub formas_load()
+        Medicamento.DataSource = Prediseñados.fármacos
+        Medicamento.SelectedItem = Prediseñados.fármacos(0)
+    End Sub
+
+    Private Sub Medicamento_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Medicamento.SelectedIndexChanged
+        Dim f As Fármaco = DirectCast(Medicamento.SelectedItem, Fármaco)
+        Administración.DataSource = f.formasFarmacéuticas
+        Administración.SelectedItem = f.formasFarmacéuticas(0)
+    End Sub
+
+    Private Sub Administración_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Administración.SelectedIndexChanged
+        Dim f As Fármaco = DirectCast(Medicamento.SelectedItem, Fármaco)
+        Dim g As formaGalénica = DirectCast(Administración.SelectedItem, formaGalénica)
+
+        Absorción.Value = g.ConstanteAbsorción
+        BD.Value = g.BD
+        Eliminación.Value = f.Ke
+        t_lag.Value = g.Latencia
+        TipoEliminación.SelectedItem = f.TipoEliminación
+        VD_Num.Value = f.VD
+        VelocidadMaximaEliminación.Value = f.vMax
+
+        Dosis1.Value = g.Dosis
+
+        'CME
+        Marca1_visible.Checked = (f.CME > 0)
+        Marca1.Value = If(f.CME > 0, f.CME, 0)
+
+        'CMR
+        Marca3_visible.Checked = (f.CMR > 0)
+        Marca3.Value = If(f.CMR > 0, f.CMR, 0)
+
+        'CTx
+        Marca2_visible.Checked = (f.CTx > 0)
+        Marca2.Value = If(f.CTx > 0, f.CTx, 0)
+
+    End Sub
+
+
+#End Region
+
 End Class
