@@ -84,7 +84,7 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icono_farma_fondo %281%29.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icono_farma_fondo %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -115,13 +115,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Cálculos\Enums\Enums.vb" />
+    <Compile Include="Cálculos\Enums\Unidades.vb" />
+    <Compile Include="Cálculos\Funciones\funcFarmac.vb" />
+    <Compile Include="Cálculos\Funciones\General.vb" />
+    <Compile Include="Cálculos\Graficación\ModeloGraficador.vb" />
+    <Compile Include="Cálculos\Graficación\Subclases\Clases.vb" />
+    <Compile Include="Cálculos\Graficación\Subclases\Coordenadas.vb" />
+    <Compile Include="Cálculos\Graficación\Subclases\Element.vb" />
+    <Compile Include="Operación\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Operación\Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -137,12 +144,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="MFA.vb" />
-    <Compile Include="Prediseñados.vb" />
+    <Compile Include="Cálculos\Graficación\MFA.vb" />
+    <Compile Include="Operación\Prediseñados.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Operación\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -211,7 +218,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="NTGRAPH.HLP" />
+    <None Include="Ensamblados\NTGRAPH.HLP" />
     <None Include="Resources\Clearallrequests_8816.png" />
   </ItemGroup>
   <ItemGroup>
@@ -230,12 +237,13 @@
     <None Include="Resources\Stroke.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icono_farma_fondo %281%29.ico" />
-    <Content Include="MIT License.txt" />
-    <Content Include="NTGraph.ocx" />
+    <Content Include="Resources\icono_farma_fondo %281%29.ico" />
+    <Content Include="Licencias\MIT License.txt" />
+    <Content Include="Ensamblados\NTGraph.ocx" />
     <None Include="Resources\icono farma fondo.png" />
     <None Include="Resources\icono farma.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

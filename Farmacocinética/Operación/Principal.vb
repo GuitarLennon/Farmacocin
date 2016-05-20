@@ -2,30 +2,30 @@
 Imports System.Windows.Forms
 Imports System.Drawing
 Imports System.Xml
-Imports Farmacocinética.ModeloFarmacocinéticoAnimado
+Imports Farmacocinética.Farmacocinética
 
 Public Class MainForm
 
     Public ReadOnly Property Marcas()
         Get
             Dim l As New List(Of Marca)
-            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca1_label.Text.ToLower()),
-                                  .color = Drawing.Color.FromKnownColor(Marca1_color.SelectedItem),
-                                  .show = Marca1_visible.Checked,
+            l.Add(New Marca With {.Name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca1_label.Text.ToLower()),
+                                  .Color = Drawing.Color.FromKnownColor(Marca1_color.SelectedItem),
+                                  .Show = Marca1_visible.Checked,
                                   .y = Marca1.Value,
-                                  .size = Marca1_tamaño.Value,
+                                  .Size = Marca1_tamaño.Value,
                                   .style = NTGRAPHLib.LineType.Dot})
-            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca2_label.Text.ToLower()),
-                                  .color = Drawing.Color.FromKnownColor(Marca2_Color.SelectedItem),
-                                  .show = Marca2_visible.Checked,
+            l.Add(New Marca With {.Name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca2_label.Text.ToLower()),
+                                  .Color = Drawing.Color.FromKnownColor(Marca2_Color.SelectedItem),
+                                  .Show = Marca2_visible.Checked,
                                   .y = Marca2.Value,
-                                  .size = Marca2_tamaño.Value,
+                                  .Size = Marca2_tamaño.Value,
                                   .style = NTGRAPHLib.LineType.Dot})
-            l.Add(New Marca With {.name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca3_label.Text.ToLower()),
-                                  .color = Drawing.Color.FromKnownColor(Marca3_color.SelectedItem),
-                                  .show = Marca3_visible.Checked,
+            l.Add(New Marca With {.Name = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Marca3_label.Text.ToLower()),
+                                  .Color = Drawing.Color.FromKnownColor(Marca3_color.SelectedItem),
+                                  .Show = Marca3_visible.Checked,
                                   .y = Marca3.Value,
-                                  .size = Marca3_tamaño.Value,
+                                  .Size = Marca3_tamaño.Value,
                                   .style = NTGRAPHLib.LineType.Dot})
 
             Return l.ToArray
@@ -38,7 +38,7 @@ Public Class MainForm
 
     ReadOnly Property VolumenDeDistribución As Double
         Get
-            Return VD_num.Value '* 10 ^ VD_Exp.Value
+            Return VD_Num.Value '* 10 ^ VD_Exp.Value
         End Get
     End Property
 
@@ -204,11 +204,7 @@ Public Class MainForm
         End Get
     End Property
 
-    ReadOnly Property MostrarAcotaciones As Boolean
-        Get
-            Return Acotaciones1.Checked
-        End Get
-    End Property
+
 
     ReadOnly Property AcotacionesColor As Drawing.Color
         Get
@@ -319,7 +315,7 @@ Public Class MainForm
 
         Me.initializeGraphic()
 
-        Me.ModeloFarmacocinéticoAnimado = New ModeloFarmacocinéticoAnimado(Me.NTGraph1, True)
+        Me.ModeloFarmacocinéticoAnimado = New ModeloFarmacocinéticoAnimado(Me.NTGraph1)
     End Sub
 
 #End Region
@@ -393,8 +389,8 @@ Public Class MainForm
 
         'FarmacoPredeterminado.DataSource = Me.Fármacos
 
-        Unidades.DataSource = [Enum].GetValues(GetType(ModeloFarmacocinéticoAnimado.Units))
-        Unidades.SelectedItem = ModeloFarmacocinéticoAnimado.Units.microgramos_por_mililitro
+        Unidades.DataSource = [Enum].GetValues(GetType(Units))
+        Unidades.SelectedItem = Units.microgramos_por_mililitro
     End Sub
 
     Private Sub initialize_laboratory()
@@ -430,6 +426,7 @@ Public Class MainForm
         CD15.LabelIsVisible = True
         CD16.LabelIsVisible = True
         CD17.LabelIsVisible = True
+        CD18.LabelIsVisible = True
 
         CD01.TabStop = False
         CD02.TabStop = False
@@ -448,6 +445,7 @@ Public Class MainForm
         CD15.TabStop = False
         CD16.TabStop = False
         CD17.TabStop = False
+        CD18.TabStop = False
 
     End Sub
 
@@ -476,40 +474,38 @@ Public Class MainForm
         If Pinned.Checked Then style = 2
 
         Me.ModeloFarmacocinéticoAnimado = New ModeloFarmacocinéticoAnimado(Me.NTGraph1) With
-                                         {.AcotacionesColor = Me.AcotacionesColor,
-                                         .BackgroundColor = Me.ColorFondo,
+                                         {.BackgroundColor = Me.ColorFondo,
                                           .Biodisponibilidad = Me.FracciónBiodisponible,
                                           .ConstanteAbsorción = Me.Ka,
                                           .ConstanteEliminación = Me.Ke,
+                                          .ConstanteMichaelisMenten = Me.Ke,
                                           .CurrentX = 0,
                                           .CursorStyle = style,
-                                          .DisplayOnSemilogarithm = Log.Checked,
                                           .Dosificación = Me.TipoDeDosificación,
                                           .Dosis = Me.Dosis,
                                           .DosisCarga = Me.DosisCarga,
                                           .DosisTotales = Me.DosisTotales,
                                           .EndingX = Me.Horas_de_estudio,
-                                          .IntervaloEntreDosis = Me.IntérvaloDeDosificación,
                                           .GraphicName = "Tiempo vs. concentración de " + TryCast(Medicamento.SelectedItem, Fármaco).Nombre,
+                                          .IntervaloEntreDosis = Me.IntérvaloDeDosificación,
                                           .Marcas = Me.Marcas,
-                                          .MostrarAcotaciones = Me.MostrarAcotaciones,
+                                          .MostrarAdministraciones = admins.Checked,
+                                          .MostrarAUC = AUC.Checked,
+                                          .MostrarCmaxTmax = CmaxTmax.Checked,
+                                          .MostrarCPT0 = CPT0.Checked,
+                                          .MostrarSemilogaritmo = Log.Checked,
                                           .PrincipalAxisColor = ColorEje,
                                           .PrincipalElement = PrincipalElement,
                                           .SecundaryElement = SecondaryElement,
                                           .SoloEliminacíón = Me.SóloEliminación,
                                           .StartingX = -2,
                                           .StepX = 1 / 60,
-                                          .OverrideRange = Me.MostrarVentanaTerapéutica.Checked,
-                                          .ConcentrationLimit = Marca2.Value,
                                           .TipoEliminación = Me.TipoDeEliminación,
-                                          .tLag = Me.t_lag.Value / 60,
-                                          .UsarCarga = Me.UsarDosisCarga,
                                           .unit = Unidad,
                                           .UnitsAbscises = "TIEMPO (horas)",
                                           .UnitsOrdered = "CONCENTRACIÓN PLASMÁTICA ~ ",
+                                          .UsarCarga = Me.UsarDosisCarga,
                                           .VelocidadDelTrazo = Me.VelocidadDeTrazo,
-                                          .View_CT0 = Me.CT0.Checked,
-                                          .View_AdministrationStart = Me.AdmonStart.Checked,
                                           .VMax = Me.VelocidadMáximaDeEliminación,
                                           .VolumenDistribución = VolumenDeDistribución
                                          }
@@ -551,6 +547,7 @@ Public Class MainForm
         Me.Iniciar.Enabled = True
         Me.Detener.Enabled = False
         Me.Panel1.Enabled = True
+
 
     End Sub
 
@@ -726,7 +723,7 @@ Public Class MainForm
         TipoEliminación.SelectedItem = f.TipoEliminación
         VD_Num.Value = f.VD
         VelocidadMaximaEliminación.Value = f.vMax
-
+        MichaelisTx.Value = f.km
         Dosis1.Value = g.Dosis
 
         'CME

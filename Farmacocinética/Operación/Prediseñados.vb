@@ -1,4 +1,4 @@
-﻿Imports Farmacocinética.ModeloFarmacocinéticoAnimado
+﻿Imports Farmacocinética.Farmacocinética
 
 Module Prediseñados
 
@@ -58,8 +58,9 @@ Module Prediseñados
         Property CTx As Double = -1
         Property formasFarmacéuticas As formaGalénica()
         Property Ke As Double
+        Property km As Double
         Property Nombre As String
-        Property TipoEliminación As ModeloFarmacocinéticoAnimado.GradosDeEliminación = GradosDeEliminación.Primer_Orden
+        Property TipoEliminación As GradosDeEliminación = GradosDeEliminación.Primer_Orden
         Property VD As Double
         Property vMax As Double
         Public Overrides Function ToString() As String
@@ -78,17 +79,20 @@ Module Prediseñados
 
     Private fármacosDefault As Fármaco() = New Fármaco() {
         New Fármaco With {
+            .Ke = 0.36,
             .Nombre = "Ampicilina",
-            .Ke = 0.3,
             .TipoEliminación = GradosDeEliminación.Primer_Orden,
+            .VD = 27,
+            .CME = 1.5,
+            .CMR = 2,
+            .CTx = 0,
             .vMax = 0,
-            .VD = 19,
             .formasFarmacéuticas = New formaGalénica() {
                 New formaGalénica With {
                     .nombre = "Ampicilina capsulas 500 mg",
                     .Vía = "Oral con deglución",
                     .BD = 50,
-                    .ConstanteAbsorción = 1.23,
+                    .ConstanteAbsorción = 0.733,
                     .Latencia = 5,
                     .Dosis = 500
                     },
@@ -96,7 +100,7 @@ Module Prediseñados
                     .nombre = "Ampicilina tabletas 1 g",
                     .Vía = "Oral con deglución",
                     .BD = 50,
-                    .ConstanteAbsorción = 1.23,
+                    .ConstanteAbsorción = 0.733,
                     .Latencia = 5,
                     .Dosis = 1000
                     },
@@ -112,7 +116,7 @@ Module Prediseñados
                     .nombre = "Ampicilina sódica 500 mg",
                     .Vía = "Intramuscular",
                     .BD = 100,
-                    .ConstanteAbsorción = 1.23,
+                    .ConstanteAbsorción = 2.5,
                     .Latencia = 5,
                     .Dosis = 500
                     },
