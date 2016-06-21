@@ -27,8 +27,8 @@
     <ProductName>FARMACOCINÉTICA</ProductName>
     <PublisherName>DR ARTURO JUÁREZ FLORES</PublisherName>
     <SuiteName>FARMALAB</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>1.5.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>3.2.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>

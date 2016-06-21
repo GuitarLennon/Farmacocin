@@ -181,3 +181,26 @@ C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\D
 C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
 C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
 C:\Users\lenno\Downloads\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.config
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.application
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.MainForm.resources
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.Resources.resources
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.GenerateResource.Cache
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.TrustInfo.xml
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe.manifest
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.application
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.exe
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.xml
+C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.pdb

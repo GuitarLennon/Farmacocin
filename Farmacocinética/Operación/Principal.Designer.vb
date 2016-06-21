@@ -93,14 +93,14 @@ Partial Class MainForm
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.CD18 = New ControlActualizable.ControlDemostración()
-        Me.MichaelisTx = New System.Windows.Forms.NumericUpDown()
         Me.CD17 = New ControlActualizable.ControlDemostración()
         Me.t_lag = New System.Windows.Forms.NumericUpDown()
         Me.CD16 = New ControlActualizable.ControlDemostración()
         Me.VME = New System.Windows.Forms.TextBox()
         Me.CD15 = New ControlActualizable.ControlDemostración()
         Me.VMA = New System.Windows.Forms.TextBox()
+        Me.CD18 = New ControlActualizable.ControlDemostración()
+        Me.MichaelisTx = New System.Windows.Forms.NumericUpDown()
         Me.CD14 = New ControlActualizable.ControlDemostración()
         Me.VelocidadMaximaEliminación = New System.Windows.Forms.NumericUpDown()
         Me.CD13 = New ControlActualizable.ControlDemostración()
@@ -197,12 +197,12 @@ Partial Class MainForm
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        Me.CD18.SuspendLayout()
-        CType(Me.MichaelisTx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CD17.SuspendLayout()
         CType(Me.t_lag, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CD16.SuspendLayout()
         Me.CD15.SuspendLayout()
+        Me.CD18.SuspendLayout()
+        CType(Me.MichaelisTx, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CD14.SuspendLayout()
         CType(Me.VelocidadMaximaEliminación, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CD13.SuspendLayout()
@@ -1045,31 +1045,6 @@ Partial Class MainForm
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Parámetros Farmacocinéticos"
         '
-        'CD18
-        '
-        Me.CD18.Control = Me.MichaelisTx
-        Me.CD18.Controls.Add(Me.MichaelisTx)
-        Me.CD18.Dock = System.Windows.Forms.DockStyle.Top
-        Me.CD18.LabelIsVisible = False
-        Me.CD18.Location = New System.Drawing.Point(3, 233)
-        Me.CD18.Name = "CD18"
-        Me.CD18.Size = New System.Drawing.Size(276, 36)
-        Me.CD18.TabIndex = 10
-        Me.CD18.Text = "Constante de Michaelis-Menten (mg/ml)"
-        '
-        'MichaelisTx
-        '
-        Me.MichaelisTx.DecimalPlaces = 3
-        Me.MichaelisTx.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MichaelisTx.Increment = New Decimal(New Integer() {1, 0, 0, 196608})
-        Me.MichaelisTx.Location = New System.Drawing.Point(0, 0)
-        Me.MichaelisTx.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
-        Me.MichaelisTx.Name = "MichaelisTx"
-        Me.MichaelisTx.Size = New System.Drawing.Size(276, 20)
-        Me.MichaelisTx.TabIndex = 1
-        Me.MichaelisTx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.MichaelisTx.Value = New Decimal(New Integer() {1, 0, 0, 131072})
-        '
         'CD17
         '
         Me.CD17.Control = Me.t_lag
@@ -1134,6 +1109,31 @@ Partial Class MainForm
         Me.VMA.Name = "VMA"
         Me.VMA.Size = New System.Drawing.Size(276, 20)
         Me.VMA.TabIndex = 1
+        '
+        'CD18
+        '
+        Me.CD18.Control = Me.MichaelisTx
+        Me.CD18.Controls.Add(Me.MichaelisTx)
+        Me.CD18.Dock = System.Windows.Forms.DockStyle.Top
+        Me.CD18.LabelIsVisible = False
+        Me.CD18.Location = New System.Drawing.Point(3, 233)
+        Me.CD18.Name = "CD18"
+        Me.CD18.Size = New System.Drawing.Size(276, 36)
+        Me.CD18.TabIndex = 10
+        Me.CD18.Text = "Constante de Michaelis-Menten (mg/ml)"
+        '
+        'MichaelisTx
+        '
+        Me.MichaelisTx.DecimalPlaces = 3
+        Me.MichaelisTx.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MichaelisTx.Increment = New Decimal(New Integer() {1, 0, 0, 196608})
+        Me.MichaelisTx.Location = New System.Drawing.Point(0, 0)
+        Me.MichaelisTx.Maximum = New Decimal(New Integer() {-727379968, 232, 0, 0})
+        Me.MichaelisTx.Name = "MichaelisTx"
+        Me.MichaelisTx.Size = New System.Drawing.Size(276, 20)
+        Me.MichaelisTx.TabIndex = 1
+        Me.MichaelisTx.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.MichaelisTx.Value = New Decimal(New Integer() {1, 0, 0, 131072})
         '
         'CD14
         '
@@ -1904,9 +1904,6 @@ Partial Class MainForm
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
-        Me.CD18.ResumeLayout(False)
-        Me.CD18.PerformLayout()
-        CType(Me.MichaelisTx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CD17.ResumeLayout(False)
         Me.CD17.PerformLayout()
         CType(Me.t_lag, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1914,6 +1911,9 @@ Partial Class MainForm
         Me.CD16.PerformLayout()
         Me.CD15.ResumeLayout(False)
         Me.CD15.PerformLayout()
+        Me.CD18.ResumeLayout(False)
+        Me.CD18.PerformLayout()
+        CType(Me.MichaelisTx, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CD14.ResumeLayout(False)
         Me.CD14.PerformLayout()
         CType(Me.VelocidadMaximaEliminación, System.ComponentModel.ISupportInitialize).EndInit()

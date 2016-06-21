@@ -130,6 +130,12 @@ Public Class MainForm
         End Get
     End Property
 
+    ReadOnly Property Km As Double
+        Get
+            Return MichaelisTx.Value
+        End Get
+    End Property
+
     ReadOnly Property TipoDeEliminación As GradosDeEliminación
         Get
             Return TipoEliminación.SelectedItem
@@ -478,7 +484,7 @@ Public Class MainForm
                                           .Biodisponibilidad = Me.FracciónBiodisponible,
                                           .ConstanteAbsorción = Me.Ka,
                                           .ConstanteEliminación = Me.Ke,
-                                          .ConstanteMichaelisMenten = Me.Ke,
+                                          .ConstanteMichaelisMenten = Me.km,
                                           .CurrentX = 0,
                                           .CursorStyle = style,
                                           .Dosificación = Me.TipoDeDosificación,
@@ -738,6 +744,10 @@ Public Class MainForm
         Marca2_visible.Checked = (f.CTx > 0)
         Marca2.Value = If(f.CTx > 0, f.CTx, 0)
 
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ToolStripStatusLabel1.Text = ToolStripStatusLabel1.Text & " Versión: " & My.Application.Info.Version.ToString
     End Sub
 
 

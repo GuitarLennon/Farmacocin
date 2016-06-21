@@ -301,7 +301,6 @@ Namespace Farmacocinética
 
         'Concentraciones Plasmáticas
         Function CP(x As Double, Optional OmitirAbsorcíón As Boolean = False) As Double
-            'If x = 0 Then Stop
 
             Dim returning As Double
             Select Case Me.Dosificación
@@ -335,8 +334,6 @@ Namespace Farmacocinética
 
             If c > 0 Then Return c Else Return 0
         End Function
-
-        'Private LastCiclo As Integer = 0
 
         Private Function DosificaciónMúltipleOManual(x As Double, Optional omitirAdministración As Boolean = False) As Double
             If x <= 0 Then
@@ -497,18 +494,16 @@ Namespace Farmacocinética
                                                       Optional dosis As Double = -1,
                                                       Optional omitirAbsorción As Boolean = False,
                                                       Optional previousConcentration As Double = 0) As Double
+            If dosis = -1 Then Return 0
 
-            Dim q As Double = 0
+            Dim q As Double = (Biodisponibilidad * dosis) / VolumenDistribución
 
             Dim c As Double = q * CoeficienteK * (Math.E ^ (-ConstanteEliminación * x))
 
-            If omitirAbsorción Then
-                Return c
-            End If
+            If Not omitirAbsorción Then c = c - ((c - previousConcentration) * Math.E ^ (-(ConstanteAbsorción) * x))
 
-            Dim abs As Double = (c - previousConcentration) * CoeficienteK * Math.E ^ (-(ConstanteAbsorción) * x)
+            Return c
 
-            Return c - abs
         End Function
 
         Private Function averiguar_ciclo(x As Double) As Ciclo
