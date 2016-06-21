@@ -187,11 +187,8 @@ C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\F
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.exe
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.pdb
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Farmacocinética.xml
-C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.pdb
-C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\ControlActualizable.xml
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\Interop.NTGRAPHLib.dll
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\bin\Debug\AxInterop.NTGRAPHLib.dll
-C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbprojResolveAssemblyReference.cache
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Interop.NTGRAPHLib.dll
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\AxInterop.NTGRAPHLib.dll
 C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Farmacocin\Farmacocinética\obj\Debug\Farmacocinética.vbproj.ResolveComReference.cache

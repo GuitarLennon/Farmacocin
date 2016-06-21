@@ -13,7 +13,7 @@
     <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\Google Drive\Cinética\Farmacocinética Original\</PublishUrl>
+    <PublishUrl>C:\Users\lenno\Downloads\Desde el inicio hasta el 160610\Farmacocin-2016-04-18\Release\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,7 +27,7 @@
     <ProductName>FARMACOCINÉTICA</ProductName>
     <PublisherName>DR ARTURO JUÁREZ FLORES</PublisherName>
     <SuiteName>FARMALAB</SuiteName>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>3.2.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

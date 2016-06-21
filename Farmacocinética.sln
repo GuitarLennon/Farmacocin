@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Farmacocinética", "Farmacocinética\Farmacocinética.vbproj", "{5A217126-B277-44B4-AA33-760AE1B49C01}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,18 @@ Global
 		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5A217126-B277-44B4-AA33-760AE1B49C01}.Unicode Release|Win32.ActiveCfg = Release|Any CPU
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Debug|Any CPU.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Debug|Win32.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Release|Any CPU.ActiveCfg = Release
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Release|Mixed Platforms.ActiveCfg = Release
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Release|Win32.ActiveCfg = Release
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Debug|Any CPU.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Debug|Mixed Platforms.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Debug|Win32.ActiveCfg = Debug
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Release|Any CPU.ActiveCfg = Release
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Release|Mixed Platforms.ActiveCfg = Release
+		{D08BDB9D-A321-4114-8943-DEA4F3B14AD0}.Unicode Release|Win32.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
